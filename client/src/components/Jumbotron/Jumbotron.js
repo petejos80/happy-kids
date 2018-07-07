@@ -1,12 +1,16 @@
 import React from "react";
+import { Jumbotron } from 'reactstrap';
 
-const Jumbotron = ({ children }) => (
-  <div
-    style={{ height: 300, clear: "both", paddingTop: 120, textAlign: "center" }}
-    className="jumbotron"
-  >
-    {children}
-  </div>
-);
+const Banner = (props) => {
+  return (
+    <div>
+      <Jumbotron>
+        <h1 className="display-3">Welcome to Happy Kids Accessories!</h1>
+        <p className="lead">Personalized Wooden Toys</p>
+        <hr className="my-2" />
+      </Jumbotron>
+    </div>
+  );
+};
 
-export default Jumbotron;
+export default Banner;

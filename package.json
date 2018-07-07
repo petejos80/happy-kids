@@ -21,8 +21,13 @@
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
+    "bootstrap": "^4.1.1",
     "express": "^4.15.4",
     "mongoose": "^5.0.17",
+    "react": "^16.4.1",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.4.1",
+    "reactstrap": "^6.2.0"
     "passport": "^0.4.0"
   }
 }
