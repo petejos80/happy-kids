@@ -3,6 +3,11 @@
 # dependencies
 /node_modules
 
+client/package-lock.json
+client/package.json
+package-lock.json
+package.json
+
 # testing
 /coverage
 
