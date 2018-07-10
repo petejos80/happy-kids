@@ -30,7 +30,9 @@ export default class Example extends React.Component {
    return (
      <div>
        <Navbar color='light' light expand='md'>
-         <NavbarBrand href='/'>Happy Kids</NavbarBrand>
+         <NavbarBrand href='/'></NavbarBrand>
+         
+      <img src="images/logo.png"alt="img" width="150px" />
 
          <NavbarToggler onClick={this.toggle} />
          <Collapse isOpen={this.state.isOpen} navbar>
