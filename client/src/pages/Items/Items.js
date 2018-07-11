@@ -7,29 +7,29 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
-class Books extends Component {
+class Items extends Component {
   state = {
-    books: [],
+    items: [],
     title: "",
     author: "",
     synopsis: ""
   };
 
   componentDidMount() {
-    this.loadBooks();
+    this.loadItems();
   }
 
-  loadBooks = () => {
-    API.getBooks()
+  loadItems = () => {
+    API.getItems()
       .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ items: res.data, title: "", author: "", synopsis: "" })
       )
       .catch(err => console.log(err));
   };
 
   deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
+    API.deleteItem(id)
+      .then(res => this.loadItems())
       .catch(err => console.log(err));
   };
 
@@ -48,7 +48,7 @@ class Books extends Component {
         author: this.state.author,
         synopsis: this.state.synopsis
       })
-        .then(res => this.loadBooks())
+        .then(res => this.loadItems())
         .catch(err => console.log(err));
     }
   };
@@ -59,7 +59,7 @@ class Books extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>What Items Should I Buy?</h1>
             </Jumbotron>
             <form>
               <Input
@@ -84,24 +84,24 @@ class Books extends Component {
                 disabled={!(this.state.author && this.state.title)}
                 onClick={this.handleFormSubmit}
               >
-                Submit Book
+                Submit Item
               </FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Items On My Cart</h1>
             </Jumbotron>
-            {this.state.books.length ? (
+            {this.state.items.length ? (
               <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                {this.state.items.map(item => (
+                  <ListItem key={item._id}>
+                    <Link to={"/items/" + item._id}>
                       <strong>
-                        {book.title} by {book.author}
+                        {item.title} by {item.author}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
+                    <DeleteBtn onClick={() => this.deleteItem(item._id)} />
                   </ListItem>
                 ))}
               </List>
@@ -115,4 +115,4 @@ class Books extends Component {
   }
 }
 
-export default Books;
+export default Items;

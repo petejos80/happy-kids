@@ -26,7 +26,22 @@ export default class Example extends React.Component {
      isOpen: !this.state.isOpen
    });
  }
+
+ goTo(route) {
+  this.props.history.replace(`/${route}`)
+  }
+
+  login() {
+    this.props.auth.login();
+  }
+
+  logout() {
+    this.props.auth.logout();
+  }
+
+
  render() {
+  const { isAuthenticated, userHasScopes } = this.props.auth;
    return (
      <div>
        <Navbar color='light' light expand='md'>
@@ -53,7 +68,25 @@ export default class Example extends React.Component {
              <NavItem>
                <NavLink href='/components/'>Orders</NavLink>
              </NavItem>
-             <UncontrolledDropdown nav inNavbar>
+             {
+              !isAuthenticated() && (
+                  <NavItem
+                    onClick={this.login.bind(this)}
+                  >
+                    Log In
+                  </NavItem>
+                )
+            }
+            {
+              isAuthenticated() && (
+                  <NavItem
+                    onClick={this.logout.bind(this)}
+                  >
+                    Log Out
+                  </NavItem>
+                )
+            }
+             {/* <UncontrolledDropdown nav inNavbar>
                <DropdownToggle nav caret>
                  Sign In
                </DropdownToggle>
@@ -66,7 +99,7 @@ export default class Example extends React.Component {
                    Create New User
                  </DropdownItem>
                </DropdownMenu>
-             </UncontrolledDropdown>
+             </UncontrolledDropdown> */}
            </Nav>
          </Collapse>
        </Navbar>
