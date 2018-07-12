@@ -16,8 +16,9 @@ const App = () => (
       <Banner />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/books" component={Books} />
         <Route exact path="/books2" component={Books2} />
-        <Route exact path="/books2/:id" component={Detail} />
+        <Route exact path="/books/:id" component={Detail} />
         <Route component={NoMatch} />
       </Switch>
     </div>
