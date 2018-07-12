@@ -2,19 +2,19 @@ import axios from "axios";
 
 export default {
   // Gets all items
-  getBooks: function() {
+  getItems: function() {
     return axios.get("/api/items");
   },
   // Gets the item with the given id
-  getBook: function(id) {
+  getItem: function(id) {
     return axios.get("/api/items/" + id);
   },
   // Deletes the item with the given id
-  deleteBook: function(id) {
+  deleteItem: function(id) {
     return axios.delete("/api/items/" + id);
   },
   // Saves an item to the database
-  saveBook: function(itemData) {
+  saveItem: function(itemData) {
     return axios.post("/api/items", itemData);
   }
 };

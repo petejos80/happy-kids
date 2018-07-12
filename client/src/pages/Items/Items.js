@@ -27,7 +27,7 @@ class Items extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteBook = id => {
+  deleteItem = id => {
     API.deleteItem(id)
       .then(res => this.loadItems())
       .catch(err => console.log(err));
@@ -43,7 +43,7 @@ class Items extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.author) {
-      API.saveBook({
+      API.saveItem({
         title: this.state.title,
         author: this.state.author,
         synopsis: this.state.synopsis
