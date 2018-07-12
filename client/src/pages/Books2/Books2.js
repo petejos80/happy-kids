@@ -57,7 +57,7 @@ class Books extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-3">
+          <Col size="md-6">
             <Jumbotron>
               <h1>What Books Should I Read?</h1>
             </Jumbotron>
@@ -88,7 +88,7 @@ class Books extends Component {
               </FormBtn>
             </form>
           </Col>
-          <Col size="md-9 sm-12">
+          <Col size="md-6 sm-12">
             <Jumbotron>
               <h1>Books On My List</h1>
             </Jumbotron>
