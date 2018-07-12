@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Nav.css"
 import {
  Collapse,
  Navbar,
@@ -32,7 +33,7 @@ export default class Example extends React.Component {
        <Navbar color='light' light expand='md'>
          <NavbarBrand href='/'></NavbarBrand>
          
-      <img src="images/logo.png"alt="img" width="150px" />
+      <img className="logo"src="images/logo.png"alt="img" width="150px" />
 
          <NavbarToggler onClick={this.toggle} />
          <Collapse isOpen={this.state.isOpen} navbar>

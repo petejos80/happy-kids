@@ -7,6 +7,7 @@ import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Banner from "./components/Jumbotron";
+import Example from "./components/Carousel"
 
 
 const App = () => (
@@ -14,6 +15,7 @@ const App = () => (
     <div>
       <Nav />
       <Banner />
+      <Example />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/books" component={Books} />
