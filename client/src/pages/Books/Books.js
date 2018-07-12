@@ -16,20 +16,20 @@ class Books extends Component {
   };
 
   componentDidMount() {
-    this.loadItems();
+    this.loadBooks();
   }
 
-  loadItems = () => {
-    API.getItems()
+  loadBooks = () => {
+    API.getBooks()
       .then(res =>
-        this.setState({ items: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
       )
       .catch(err => console.log(err));
   };
 
-  deleteItem = id => {
-    API.deleteItem(id)
-      .then(res => this.loadItems())
+  deleteBook = id => {
+    API.deleteBook(id)
+      .then(res => this.loadBooks())
       .catch(err => console.log(err));
   };
 
@@ -43,12 +43,12 @@ class Books extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.author) {
-      API.saveItemk({
+      API.saveBook({
         title: this.state.title,
         author: this.state.author,
         synopsis: this.state.synopsis
       })
-        .then(res => this.loadItems())
+        .then(res => this.loadBooks())
         .catch(err => console.log(err));
     }
   };
