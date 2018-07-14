@@ -19,9 +19,6 @@ app.use(routes);
 //Models
 var models = require("./models");
 
-//Routes
-var authRoute = require("./routes/auth.js")(app, passport);
-
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/happykids"
