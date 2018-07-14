@@ -1,12 +1,17 @@
 import React, {} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/Home";
-import Books from "./pages/Books";
-import Books2 from "./pages/Books2";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Banner from "./components/Jumbotron";
+import beads from "./pages/beads"
+import bracelets from "./pages/bracelets"
+import keychains from "./pages/keychains"
+import pacifierholders from "./pages/pacifierholders"
+import rattlers from "./pages/rattlers"
+import teethers from "./pages/teethers"
+import Books2 from "./pages/Books2"
+
+
+
 import Example from "./components/Carousel"
 
 
@@ -17,11 +22,13 @@ const App = () => (
       <Banner />
       <Example />
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/books" component={Books} />
+        <Route exact path="/beads" component={beads} />
+        <Route exact path="/bracelets" component={bracelets} />
+        <Route exact path="/keychains" component={keychains} />
+        <Route exact path="/pacifierholders" component={pacifierholders} />
+        <Route exact path="/rattlers" component={rattlers} />
+        <Route exact path="/teethers" component={teethers} />
         <Route exact path="/books2" component={Books2} />
-        <Route exact path="/books/:id" component={Detail} />
-        <Route component={NoMatch} />
       </Switch>
     </div>
   </Router>
