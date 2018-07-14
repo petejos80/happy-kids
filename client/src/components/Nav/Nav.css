@@ -1,4 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 .logo{
-    height:100px!important;
-    width:100px!important;
+    margin-top:10%;
+    height:150px!important;
+    width:150px!important;
 }
+
+  .nav-style {
+    background-color:#008cba!important;
+    display: block;
+    height: 80px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  .link-style{
+      color: white!important;
+  }
+  
+  

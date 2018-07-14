@@ -2,3 +2,22 @@ img{
     height: 500px!important;
     width:500px!important;
 }
+.carousel {
+    position: inherit!important;
+    margin-top: 0!important;
+    width: 500px!important;
+    float:right!important
+
+  }
+  .p-style {
+      width:500px;
+      float: left !important
+  }
+  .style-container{
+      margin-bottom:40%;
+  }
+
+  /* .carousel-inner {
+    position: relative;
+    width: 100%;
+  }   */
