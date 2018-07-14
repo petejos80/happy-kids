@@ -12,17 +12,17 @@ const items = [
   {
     src: '../images/bluegrey.jpg',
     altText: 'Slide 1',
-    caption: 'Slide 1',
+    caption: '',
   },
   {
     src: '../images/greenpacclip.jpg',
     altText: 'Slide 2',
-    caption: 'Slide 2'
+    caption: ''
   },
   {
-    src: '../images/bluegrey.jpg',
+    src: '../images/purellow.jpg',
     altText: 'Slide 3',
-    caption: 'Slide 3'
+    caption: ''
   }
 ];
 

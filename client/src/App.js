@@ -7,7 +7,8 @@ import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Banner from "./components/Jumbotron";
-import Example from "./components/Carousel"
+import Example from "./components/Carousel";
+
 
 
 const App = () => (
