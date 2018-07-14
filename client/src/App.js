@@ -8,6 +8,7 @@ import keychains from "./pages/keychains"
 import pacifierholders from "./pages/pacifierholders"
 import rattlers from "./pages/rattlers"
 import teethers from "./pages/teethers"
+import Books2 from "./pages/Books2"
 
 
 
@@ -21,12 +22,13 @@ const App = () => (
       <Banner />
       <Example />
       <Switch>
-        <Route exact path="/pages/beads" component={beads} />
-        <Route exact path="/pages/bracelets" component={bracelets} />
-        <Route exact path="/pages/keychains" component={keychains} />
-        <Route exact path="/pages/pacifierholders" component={pacifierholders} />
-        <Route exact path="/pages/rattlers" component={rattlers} />
-        <Route exact path="/pages/teethers" component={teethers} />
+        <Route exact path="/beads" component={beads} />
+        <Route exact path="/bracelets" component={bracelets} />
+        <Route exact path="/keychains" component={keychains} />
+        <Route exact path="/pacifierholders" component={pacifierholders} />
+        <Route exact path="/rattlers" component={rattlers} />
+        <Route exact path="/teethers" component={teethers} />
+        <Route exact path="/books2" component={Books2} />
       </Switch>
     </div>
   </Router>
