@@ -41,18 +41,48 @@ export default class Example extends React.Component {
              <NavItem>
                <NavLink href='/'>Home</NavLink>
              </NavItem>
-             <NavItem>
-               <NavLink href='/books2'>Toys</NavLink>
-             </NavItem>
+             <UncontrolledDropdown nav inNavbar>
+               <DropdownToggle nav caret>
+                 Toys
+               </DropdownToggle>
+               <DropdownMenu right>
+                 <DropdownItem>
+                   Bracelets <NavLink href='/bracelets/'></NavLink>
+                 </DropdownItem>
+                 <DropdownItem divider />
+                 <DropdownItem>
+                   Keychains <NavLink href='/keychains'></NavLink>
+                 </DropdownItem>
+                 <DropdownItem divider />
+                 <DropdownItem>
+                   Pacifier Holders <NavLink href='/pacifierholders'></NavLink>
+                 </DropdownItem>
+                 <DropdownItem divider />
+                 <DropdownItem>
+                   Rattlers <NavLink href='/rattlers'></NavLink>
+                 </DropdownItem>
+                 <DropdownItem divider />
+                 <DropdownItem>
+                   Teethers <NavLink href='/teethers'></NavLink>
+                 </DropdownItem>
+               </DropdownMenu>
+             </UncontrolledDropdown>
+
+
+
+
+             
              <NavItem>
                <NavLink href='/components/'>About</NavLink>
              </NavItem>
              <NavItem>
                <NavLink href='/components/'>Contact</NavLink>
              </NavItem>
+
              <NavItem>
                <NavLink href='/components/'>Reviews</NavLink>
              </NavItem>
+
              <NavItem>
                <NavLink href='/components/'>Orders</NavLink>
              </NavItem>
