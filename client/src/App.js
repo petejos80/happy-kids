@@ -11,6 +11,7 @@ import teethers from "./pages/teethers"
 
 
 
+import Example from "./components/Carousel"
 
 
 const App = () => (
@@ -18,6 +19,7 @@ const App = () => (
     <div>
       <Nav />
       <Banner />
+      <Example />
       <Switch>
         <Route exact path="/pages/beads" component={beads} />
         <Route exact path="/pages/bracelets" component={bracelets} />
