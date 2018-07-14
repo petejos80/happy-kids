@@ -30,7 +30,7 @@ export default class Example extends React.Component {
  render() {
    return (
      <div>
-       <Navbar color='light' light expand='md'>
+       <Navbar className="nav-style" color='light' light expand='md'>
          <NavbarBrand href='/'></NavbarBrand>
          
       <img className="logo"src="images/logo.png"alt="img" width="150px" />
@@ -39,8 +39,9 @@ export default class Example extends React.Component {
          <Collapse isOpen={this.state.isOpen} navbar>
            <Nav className='ml-auto' navbar>
              <NavItem>
-               <NavLink href='/'>Home</NavLink>
+               <NavLink className="link-style" href='/'>Home</NavLink>
              </NavItem>
+
              <UncontrolledDropdown nav inNavbar>
                <DropdownToggle nav caret>
                  Toys
@@ -66,28 +67,24 @@ export default class Example extends React.Component {
                    Teethers <NavLink href='/teethers'></NavLink>
                  </DropdownItem>
                </DropdownMenu>
-             </UncontrolledDropdown>
+             </UncontrolledDropdown>          
 
-
-
-
-             
              <NavItem>
-               <NavLink href='/components/'>About</NavLink>
+               <NavLink className="link-style" href='/components/'>About</NavLink>
              </NavItem>
              <NavItem>
-               <NavLink href='/components/'>Contact</NavLink>
+               <NavLink className="link-style" href='/components/'>Contact</NavLink>
              </NavItem>
 
              <NavItem>
-               <NavLink href='/components/'>Reviews</NavLink>
+               <NavLink className="link-style" href='/components/'>Reviews</NavLink>
              </NavItem>
 
              <NavItem>
-               <NavLink href='/components/'>Orders</NavLink>
+               <NavLink className="link-style"href='/components/'>Orders</NavLink>
              </NavItem>
              <UncontrolledDropdown nav inNavbar>
-               <DropdownToggle nav caret>
+               <DropdownToggle className="link-style" nav caret>
                  Sign In
                </DropdownToggle>
                <DropdownMenu right>

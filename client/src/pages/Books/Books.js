@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-import Example from "../../components/Carousel"
+
 
 class Books extends Component {
   state = {
@@ -62,7 +62,6 @@ class Books extends Component {
             <Jumbotron>
               <h1>What Books Should I Read?</h1>
             </Jumbotron>
-            <Example />
            
             <form>
               <Input
