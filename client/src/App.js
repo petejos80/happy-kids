@@ -9,6 +9,7 @@ import pacifierholders from "./pages/pacifierholders"
 import rattlers from "./pages/rattlers"
 import teethers from "./pages/teethers"
 import Books2 from "./pages/Books2"
+import Footer from "./components/Footer"
 
 
 
@@ -21,6 +22,7 @@ const App = () => (
       <Nav />
       <Banner />
       <Example />
+      <Footer />
       <Switch>
         <Route exact path="/beads" component={beads} />
         <Route exact path="/bracelets" component={bracelets} />

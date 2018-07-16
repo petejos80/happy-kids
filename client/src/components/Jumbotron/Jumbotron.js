@@ -12,4 +12,5 @@ const Jumbotron = ({ children }) => (
   </div>
 );
 
+
 export default Jumbotron;

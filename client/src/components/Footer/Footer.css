@@ -1,0 +1,12 @@
+
+.page-footer{
+    background-color:#008cba!important;
+    max-height:50px!important;
+    padding-top: 30px;
+    margin-top:25%;
+}
+h5{
+    font-size: 12px;
+    float: inherit;
+    color: white
+}
