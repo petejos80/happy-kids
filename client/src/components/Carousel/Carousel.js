@@ -27,7 +27,7 @@ const items = [
   }
 ];
 
-class Example extends Component {
+class Caro extends Component {
   constructor(props) {
     super(props);
     this.state = { activeIndex: 0 };
@@ -81,7 +81,7 @@ class Example extends Component {
 
     return (
       <Container className="style-container">
-      <p className="p-style">Voluptate tempor occaecat duis dolor.Cillum culpa quis culpa cupidatat aliquip exercitation deserunt est.
+      {/* <p className="p-style">Voluptate tempor occaecat duis dolor.Cillum culpa quis culpa cupidatat aliquip exercitation deserunt est.
         Ea enim deserunt dolore nisi ex esse cillum do fugiat id veniam nulla. Aute excepteur ullamco commodo minim reprehenderit culpa aliquip nisi enim et ea magna.
         Sit cupidatat est laborum esse velit occaecat magna Lorem id. Sunt pariatur aliquip consectetur eiusmod voluptate anim aliqua.
         Velit amet nostrud consequat adipisicing qui magna. Consequat do non adipisicing aliqua exercitation incididunt elit adipisicing eiusmod labore.
@@ -92,7 +92,7 @@ class Example extends Component {
         Ad deserunt reprehenderit voluptate ex enim aute nostrud id proident consectetur pariatur eu sunt cupidatat.
         Adipisicing do minim cillum irure nisi non laboris consequat proident do qui elit ex.
         Occaecat Lorem cillum pariatur minim tempor exercitation irure nostrud id amet commodo Lorem sunt.
-        </p>
+        </p> */}
         
         <Carousel className="carousel"
           activeIndex={activeIndex}
@@ -109,4 +109,4 @@ class Example extends Component {
 }
 
 
-export default Example;
+export default Caro;

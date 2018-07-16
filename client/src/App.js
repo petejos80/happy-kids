@@ -9,20 +9,18 @@ import pacifierholders from "./pages/pacifierholders"
 import rattlers from "./pages/rattlers"
 import teethers from "./pages/teethers"
 import Books2 from "./pages/Books2"
-
-
-
-import Example from "./components/Carousel"
+import Home from "./pages/home"
 
 
 const App = () => (
   <Router>
     <div>
       <Nav />
-      <Banner />
-      <Example />
+      <Home />
       <Switch>
+        <Route exact path="/home" component={Home} />
         <Route exact path="/beads" component={beads} />
+        <Route exact path="/home" component={Home} />
         <Route exact path="/bracelets" component={bracelets} />
         <Route exact path="/keychains" component={keychains} />
         <Route exact path="/pacifierholders" component={pacifierholders} />
