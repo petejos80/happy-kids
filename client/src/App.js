@@ -2,6 +2,7 @@ import React, {} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
 import Banner from "./components/Jumbotron";
+import Footer from "./components/Footer";
 import beads from "./pages/beads"
 import bracelets from "./pages/bracelets"
 import keychains from "./pages/keychains"
@@ -10,17 +11,19 @@ import rattlers from "./pages/rattlers"
 import teethers from "./pages/teethers"
 import Books2 from "./pages/Books2"
 import Home from "./pages/home"
+import Contact from "./pages/Contact"
+
 
 
 const App = () => (
   <Router>
-    <div>
-      <Nav />
-      <Home />
-      <Switch>
+    <div>     
+   <Nav />
+   <Banner />
+         <Switch>
         <Route exact path="/home" component={Home} />
         <Route exact path="/beads" component={beads} />
-        <Route exact path="/home" component={Home} />
+        <Route exact path="/Contact" component={Contact} />
         <Route exact path="/bracelets" component={bracelets} />
         <Route exact path="/keychains" component={keychains} />
         <Route exact path="/pacifierholders" component={pacifierholders} />

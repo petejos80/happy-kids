@@ -1,18 +1,20 @@
 import React from "react";
 // import { Jumbotron } from 'reactstrap';
+import Nav from "../../components/Nav"
 import Caro from "../../components/Carousel"
 import Banner from "../../components/Jumbotron";
+import Footer from "../../components/Footer"
 
 
 const Home = (props) => {
     return (
         <div>
-      <Banner>
+          <Nav />
+      {/* <Banner>
         <h1 className="display-1">Welcome to Happy Kids Accessories!</h1>
         <p className="lead">Personalized Wooden Toys</p>
-</Banner>
+</Banner> */}
 
-{/* <Container className="style-container"> */}
       <p className="p-style">Voluptate tempor occaecat duis dolor.Cillum culpa quis culpa cupidatat aliquip exercitation deserunt est.
         Ea enim deserunt dolore nisi ex esse cillum do fugiat id veniam nulla. Aute excepteur ullamco commodo minim reprehenderit culpa aliquip nisi enim et ea magna.
         Sit cupidatat est laborum esse velit occaecat magna Lorem id. Sunt pariatur aliquip consectetur eiusmod voluptate anim aliqua.
@@ -26,9 +28,9 @@ const Home = (props) => {
         Occaecat Lorem cillum pariatur minim tempor exercitation irure nostrud id amet commodo Lorem sunt.
         </p>
       <Caro />
-      {/* </Container> */}
+      <Footer />
       </div>
-        
+      
     );
         };
 
