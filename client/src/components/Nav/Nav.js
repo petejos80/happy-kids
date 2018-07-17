@@ -76,13 +76,6 @@ export default class Example extends React.Component {
                <NavLink className="link-style" href='/Contact'>Contact</NavLink>
              </NavItem>
 
-             <NavItem>
-               <NavLink className="link-style" href='/components/'>Reviews</NavLink>
-             </NavItem>
-
-             <NavItem>
-               <NavLink className="link-style"href='/components/'>Orders</NavLink>
-             </NavItem>
              <UncontrolledDropdown nav inNavbar>
                <DropdownToggle className="link-style" nav caret>
                  Sign In
