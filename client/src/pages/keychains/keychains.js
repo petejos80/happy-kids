@@ -21,6 +21,7 @@ const Banner = (props) => {
         <hr className="my-3" />
       </Jumbotron>
     </div>
+    
   );
 };
 
