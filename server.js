@@ -1,8 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const logger = require('morgan');
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const item = require('./routes/api/item')
+const auth = require('./routes/api/auth')
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -13,8 +16,19 @@ app.use(bodyParser.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+app.use(logger('dev'));
 // Add routes, both API and view
-app.use(routes);
+// app.use(routes);
+app.use('/api/item', item);
+app.use('/api/auth', auth);
+
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  next(err);
+});
+
+
 
 // // For Passport
 // app.use(
@@ -31,7 +45,7 @@ app.use(routes);
 var models = require("./models");
 
 //Routes
-var authRoute = require("./routes/auth.js")(app, passport);
+// var authRoute = require("./routes/api/auth.js")(app, passport);
 
 // //load passport strategies
 // require("./config/passport/passport.js")(passport, models.user);
