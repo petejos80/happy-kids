@@ -1,6 +1,6 @@
 img{
-    height: 500px!important;
-    width:500px!important;
+    height: 400px!important;
+    width:400px!important;
 }
 .carousel {
     position: inherit!important;
@@ -11,7 +11,8 @@ img{
   }
   .p-style {
       width:500px;
-      float: left !important
+      float: left !important;
+      margin-left: 9%
   }
   .style-container{
       margin-bottom:40%;
