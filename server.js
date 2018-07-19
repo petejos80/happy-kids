@@ -20,11 +20,12 @@ if (process.env.NODE_ENV === "production") {
 app.use(logger('dev'));
 // Add routes, both API and view
 // app.use(routes);
-app.use('/api/item', item);
+
 app.use('/api/auth', auth);
+app.use('/api/items', item);
 
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  var err = new Error('Not Found');``
   next(err);
 });
 
