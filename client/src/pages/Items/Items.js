@@ -8,29 +8,31 @@ import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
 
-class Books extends Component {
+class Items extends Component {
   state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: ""
+    items: [],
+    name: "",
+    price: "",
+    description: ""
   };
 
   componentDidMount() {
-    this.loadBooks();
+    this.loadItems();
   }
 
-  loadBooks = () => {
-    API.getBooks()
-      .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+  loadItems = () => {
+    API.getItems()
+      .then(res => {
+        console.log(res)
+        this.setState({ items: res.data, name: "", price: "", description: "" })
+      }
       )
       .catch(err => console.log(err));
   };
 
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
+  deleteItem = id => {
+    API.deleteItem(id)
+      .then(res => this.loadItems())
       .catch(err => console.log(err));
   };
 
@@ -43,11 +45,11 @@ class Books extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.author) {
-      API.saveBook({
-        title: this.state.title,
-        author: this.state.author,
-        synopsis: this.state.synopsis
+    if (this.state.name && this.state.price) {
+      API.saveItem({
+        name: this.state.name,
+        price: this.state.price,
+        description: this.state.description
       })
         .then(res => this.loadBooks())
         .catch(err => console.log(err));
@@ -60,27 +62,27 @@ class Books extends Component {
         <Row>
           <Col size="md-3">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Add Items for Sale</h1>
             </Jumbotron>
            
             <form>
               <Input
-                value={this.state.title}
+                value={this.state.name}
                 onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
+                name="name"
+                placeholder="Name (required)"
               />
               <Input
-                value={this.state.author}
+                value={this.state.price}
                 onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
+                name="price"
+                placeholder="Price (required)"
               />
               <TextArea
-                value={this.state.synopsis}
+                value={this.state.description}
                 onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="description"
+                placeholder="Description (Optional)"
               />
               <FormBtn
                 disabled={!(this.state.author && this.state.title)}
@@ -92,18 +94,18 @@ class Books extends Component {
           </Col>
           <Col size="md-9 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Items Currently for Sale</h1>
             </Jumbotron>
-            {this.state.books.length ? (
+            {this.state.items.length ? (
               <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                {this.state.items.map(item => (
+                  <ListItem key={item._id}>
+                    <Link to={"/items/" + item._id}>
                       <strong>
-                        {book.title} by {book.author}
+                        {item.name} priced at {item.price}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
+                    <DeleteBtn onClick={() => this.deleteItem(item._id)} />
                   </ListItem>
                 ))}
               </List>
@@ -117,4 +119,4 @@ class Books extends Component {
   }
 }
 
-export default Books;
+export default Items;
