@@ -15,6 +15,7 @@ import Contact from "./pages/Contact"
 import Login from './components/Login';
 import Register from './components/Register';
 import Caro from './pages/home';
+import Items from './pages/Items';
 
 
 const App = () => (
@@ -25,6 +26,7 @@ const App = () => (
 
       <Switch>
         <Route path='/login' component={Login} />
+        <Route path='/items' component={Items} />
         <Route path='/register' component={Register} />
         <Route exact path="/" component={home} />
         <Route exact path="/beads" component={beads} />
