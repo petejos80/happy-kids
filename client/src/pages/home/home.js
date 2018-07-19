@@ -9,7 +9,7 @@ import Footer from "../../components/Footer"
 const Home = (props) => {
     return (
         <div>
-          <Nav />
+          {/* <Nav /> */}
      
 
       {/* <p className="p-style">Voluptate tempor occaecat duis dolor.Cillum culpa quis culpa cupidatat aliquip exercitation deserunt est.

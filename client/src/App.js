@@ -12,9 +12,9 @@ import rattlers from "./pages/rattlers"
 import teethers from "./pages/teethers"
 import Home from "./pages/home"
 import Contact from "./pages/Contact"
-import Caro from "./components/Carousel"
 import Login from './components/Login';
 import Register from './components/Register';
+import Caro from './pages/home';
 
 
 const App = () => (
@@ -23,6 +23,7 @@ const App = () => (
    <Nav />
    <Banner />
       <Switch>
+        {/* <Route path='/' component={Home} /> */}
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
         <Route exact path="/home" component={Home} />
