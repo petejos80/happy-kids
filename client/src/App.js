@@ -12,7 +12,6 @@ import Rattlers from "./pages/Rattlers"
 import Teethers from "./pages/Teethers"
 import Home from "./pages/Home"
 import Contact from "./pages/Contact"
-import Caro from "./components/Carousel"
 import Login from './components/Login';
 import Register from './components/Register';
 
@@ -38,7 +37,8 @@ const App = () => (
       </div>
   </Router>  
 );
-document.getElementById('root')
+
+document.getElementById('root');
 
 export default App;
 
