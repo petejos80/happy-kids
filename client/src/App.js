@@ -14,7 +14,7 @@ import home from "./pages/home"
 import Contact from "./pages/Contact"
 import Login from './components/Login';
 import Register from './components/Register';
-import Caro from './pages/home';
+import About from './pages/About'
 
 
 const App = () => (
@@ -26,7 +26,7 @@ const App = () => (
       <Switch>
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={home} />
         <Route exact path="/beads" component={beads} />
         <Route exact path="/Contact" component={Contact} />
         <Route exact path="/bracelets" component={bracelets} />
@@ -34,6 +34,7 @@ const App = () => (
         <Route exact path="/pacifierholders" component={pacifierholders} />
         <Route exact path="/rattlers" component={rattlers} />
         <Route exact path="/teethers" component={teethers} />
+        <Route exact path="/About" component={About} />
       </Switch>
       <Footer />
       </div>

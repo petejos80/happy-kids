@@ -43,7 +43,7 @@ export default class Example extends React.Component {
              </NavItem>
 
              <UncontrolledDropdown nav inNavbar>
-               <DropdownToggle nav caret>
+               <DropdownToggle className="link-style" nav caret>
                  Toys
                </DropdownToggle>
                <DropdownMenu right>
@@ -70,7 +70,7 @@ export default class Example extends React.Component {
              </UncontrolledDropdown>          
 
              <NavItem>
-               <NavLink className="link-style" href='/components/'>About</NavLink>
+               <NavLink className="link-style" href='/About/'>About</NavLink>
              </NavItem>
              <NavItem>
                <NavLink className="link-style" href='/Contact/'>Contact</NavLink>

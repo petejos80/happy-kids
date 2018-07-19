@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import "./Contact.css"
 
 export default class Contact extends React.Component {
   render() {
     return (
       <div>
       <Form className="form" method="POST" action="https://formspree.io/YOUR EMAIL">
-      <h1>Contact Us</h1>
+      <h1 className="header">Contact Us</h1>
       <FormGroup className="form-one">
   <Input className="form" type="email" name="email" placeholder="Your email" />
   <Label name="message" placeholder="Your message" />
