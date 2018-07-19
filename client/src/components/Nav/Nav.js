@@ -70,10 +70,10 @@ export default class Example extends React.Component {
              </UncontrolledDropdown>          
 
              <NavItem>
-               <NavLink className="link-style" href='/components/'>About</NavLink>
+               <NavLink className="link-style" href='/home'>About</NavLink>
              </NavItem>
              <NavItem>
-               <NavLink className="link-style" href='/Contact/'>Contact</NavLink>
+               <NavLink className="link-style" href='/Contact'>Contact</NavLink>
              </NavItem>
 
              <UncontrolledDropdown nav inNavbar>
