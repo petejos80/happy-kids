@@ -1,1 +1,1 @@
-export { default } from "./beads.js";
+export { default } from "./Beads.js";

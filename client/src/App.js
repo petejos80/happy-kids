@@ -4,13 +4,13 @@ import ReactDOM from 'react-dom';
 import Nav from "./components/Nav";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-import beads from "./pages/beads"
-import bracelets from "./pages/bracelets"
-import keychains from "./pages/keychains"
-import pacifierholders from "./pages/pacifierholders"
-import rattlers from "./pages/rattlers"
-import teethers from "./pages/teethers"
-import home from "./pages/home"
+import Beads from "./pages/Beads";
+import Bracelets from "./pages/Bracelets"
+import Keychains from "./pages/Keychains"
+import Pacifierholders from "./pages/Pacifierholders"
+import Rattlers from "./pages/Rattlers"
+import Teethers from "./pages/Teethers"
+import Home from "./pages/Home"
 import Contact from "./pages/Contact"
 import Login from './components/Login';
 import Register from './components/Register'
@@ -27,21 +27,23 @@ const App = () => (
         <Route path='/login' component={Login} />
         <Route path='/items' component={Items} />
         <Route path='/register' component={Register} />
-        <Route exact path="/" component={home} />
-        <Route exact path="/beads" component={beads} />
-        <Route exact path="/Contact" component={Contact} />
-        <Route exact path="/bracelets" component={bracelets} />
-        <Route exact path="/keychains" component={keychains} />
-        <Route exact path="/pacifierholders" component={pacifierholders} />
-        <Route exact path="/rattlers" component={rattlers} />
-        <Route exact path="/teethers" component={teethers} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/beads" component={Beads} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/bracelets" component={Bracelets} />
+        <Route exact path="/keychains" component={Keychains} />
+        <Route exact path="/pacifierholders" component={Pacifierholders} />
+        <Route exact path="/rattlers" component={Rattlers} />
+        <Route exact path="/teethers" component={Teethers} />
         <Route exact path="/About" component={About} />
+
       </Switch>
       <Footer />
       </div>
   </Router>  
 );
-document.getElementById('root')
+
+document.getElementById('root');
 
 export default App;
 

@@ -1,1 +1,1 @@
-export { default } from "./teethers.js";
+export { default } from "./Teethers.js";

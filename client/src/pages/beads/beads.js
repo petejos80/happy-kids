@@ -1,7 +1,7 @@
 import React from "react";
 import { Jumbotron } from 'reactstrap';
 
-const Banner = (props) => {
+const Beads = (props) => {
   return (
     <div>
       <Jumbotron>
@@ -59,4 +59,4 @@ const Banner = (props) => {
   );
 };
 
-export default Banner;
+export default Beads;

@@ -1,1 +1,1 @@
-export { default } from "./rattlers.js";
+export { default } from "./Rattlers.js";
