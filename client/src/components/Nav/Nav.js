@@ -82,11 +82,11 @@ export default class Example extends React.Component {
                </DropdownToggle>
                <DropdownMenu right>
                  <DropdownItem>
-                   Sign In
+                   Sign In <NavLink href='/Login'></NavLink>
                  </DropdownItem>
                  <DropdownItem divider />
                  <DropdownItem>
-                   Create New User
+                   Register <NavLink href='/Register'></NavLink>
                  </DropdownItem>
                </DropdownMenu>
              </UncontrolledDropdown>
