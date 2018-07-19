@@ -12,18 +12,21 @@ import rattlers from "./pages/rattlers"
 import teethers from "./pages/teethers"
 import home from "./pages/home"
 import Contact from "./pages/Contact"
-import Caro from "./components/Carousel"
-
+import Login from './components/Login';
+import Register from './components/Register';
+import Caro from './pages/home';
 
 
 const App = () => (
-  <Router>
-    <div>     
+  <Router> 
+    <div> 
    <Nav />
    <Banner />
-   <Caro />
-         <Switch>
-        <Route exact path="/home" component={home} />
+
+      <Switch>
+        <Route path='/login' component={Login} />
+        <Route path='/register' component={Register} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/beads" component={beads} />
         <Route exact path="/Contact" component={Contact} />
         <Route exact path="/bracelets" component={bracelets} />
@@ -33,10 +36,10 @@ const App = () => (
         <Route exact path="/teethers" component={teethers} />
       </Switch>
       <Footer />
-    </div>
-  </Router>
-  
+      </div>
+  </Router>  
 );
+document.getElementById('root')
 
 export default App;
 

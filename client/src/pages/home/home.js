@@ -11,6 +11,7 @@ import Caro from "../../components/Carousel"
 const home = (props) => {
     return (
         <div>
+
       <Caro />
       </div>
     )
