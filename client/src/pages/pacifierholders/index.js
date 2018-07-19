@@ -1,1 +1,1 @@
-export { default } from "./pacifierholders.js";
+export { default } from "./Pacifierholders.js";

@@ -1,1 +1,1 @@
-export { default } from "./bracelets.js";
+export { default } from "./Bracelets.js";
