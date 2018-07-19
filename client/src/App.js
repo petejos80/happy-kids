@@ -15,12 +15,12 @@ import Contact from "./pages/Contact"
 import Login from './components/Login';
 import Register from './components/Register';
 
-
 const App = () => (
   <Router> 
     <div> 
    <Nav />
    <Banner />
+
       <Switch>
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
