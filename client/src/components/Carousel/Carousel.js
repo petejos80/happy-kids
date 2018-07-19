@@ -80,7 +80,8 @@ class Caro extends Component {
     });
 
     return (
-      <Container className="style-container">
+      <div>
+      <Container>
       <p className="p-style">Voluptate tempor occaecat duis dolor.Cillum culpa quis culpa cupidatat aliquip exercitation deserunt est.
         Ea enim deserunt dolore nisi ex esse cillum do fugiat id veniam nulla. Aute excepteur ullamco commodo minim reprehenderit culpa aliquip nisi enim et ea magna.
         Sit cupidatat est laborum esse velit occaecat magna Lorem id. Sunt pariatur aliquip consectetur eiusmod voluptate anim aliqua.
@@ -104,6 +105,7 @@ class Caro extends Component {
           <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
         </Carousel>
         </Container>
+        </div>
         );
   }
 }

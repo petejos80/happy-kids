@@ -10,7 +10,7 @@ import keychains from "./pages/keychains"
 import pacifierholders from "./pages/pacifierholders"
 import rattlers from "./pages/rattlers"
 import teethers from "./pages/teethers"
-import Home from "./pages/home"
+import home from "./pages/home"
 import Contact from "./pages/Contact"
 import Login from './components/Login';
 import Register from './components/Register';
@@ -22,11 +22,11 @@ const App = () => (
     <div> 
    <Nav />
    <Banner />
+
       <Switch>
-        {/* <Route path='/' component={Home} /> */}
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
-        <Route exact path="/home" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/beads" component={beads} />
         <Route exact path="/Contact" component={Contact} />
         <Route exact path="/bracelets" component={bracelets} />
