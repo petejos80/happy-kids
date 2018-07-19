@@ -69,11 +69,14 @@ export default class Example extends React.Component {
                </DropdownMenu>
              </UncontrolledDropdown>          
 
+             {/* <NavItem>
+               <NavLink className="link-style" href='/home'>About</NavLink>
+             </NavItem> */}
              <NavItem>
-               <NavLink className="link-style" href='/About/'>About</NavLink>
+               <NavLink className="link-style" href='/about/'>About</NavLink>
              </NavItem>
              <NavItem>
-               <NavLink className="link-style" href='/Contact/'>Contact</NavLink>
+               <NavLink className="link-style" href='/contact/'>Contact</NavLink>
              </NavItem>
 
              <UncontrolledDropdown nav inNavbar>
@@ -82,11 +85,11 @@ export default class Example extends React.Component {
                </DropdownToggle>
                <DropdownMenu right>
                  <DropdownItem>
-                   Sign In
+                   Sign In <NavLink href='/Login'></NavLink>
                  </DropdownItem>
                  <DropdownItem divider />
                  <DropdownItem>
-                   Create New User
+                   Register <NavLink href='/Register'></NavLink>
                  </DropdownItem>
                </DropdownMenu>
              </UncontrolledDropdown>

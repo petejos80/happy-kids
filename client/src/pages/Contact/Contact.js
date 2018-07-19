@@ -6,8 +6,8 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div>
-      <Form className="form" method="POST" action="https://formspree.io/YOUR EMAIL">
-      <h1 className="header">Contact Us</h1>
+      <Form className="form" method="POST" action="https://formspree.io/abinding@gmail.com">
+      <h1>Contact Us</h1>
       <FormGroup className="form-one">
   <Input className="form" type="email" name="email" placeholder="Your email" />
   <Label name="message" placeholder="Your message" />

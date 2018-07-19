@@ -13,9 +13,9 @@ import teethers from "./pages/teethers"
 import home from "./pages/home"
 import Contact from "./pages/Contact"
 import Login from './components/Login';
-import Register from './components/Register';
+import Register from './components/Register'
 import About from './pages/About'
-
+import Items from './pages/Items';
 
 const App = () => (
   <Router> 
@@ -25,6 +25,7 @@ const App = () => (
 
       <Switch>
         <Route path='/login' component={Login} />
+        <Route path='/items' component={Items} />
         <Route path='/register' component={Register} />
         <Route exact path="/" component={home} />
         <Route exact path="/beads" component={beads} />
