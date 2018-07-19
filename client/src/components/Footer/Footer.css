@@ -1,11 +1,20 @@
 .page-footer{
     background-color:#008cba!important;
-    max-height:50px!important;
-    padding-top: 30px;
-    margin-top:25%;
+    max-height:10px!important;
+    padding-top: 10px;
+    padding-bottom: 60px!important
+}
+.footer-copyright{
+   font-size: 10px;
+   float: right;
+   margin-bottom:100px
 }
 h5{
     font-size: 12px;
-    float: inherit;
-    color: white
+    color: white;
+}
+.responsive-image {
+    height: 30px!important;
+    width: 30px!important;
+    padding-bottom: 0;
 }
