@@ -10,7 +10,7 @@ import keychains from "./pages/keychains"
 import pacifierholders from "./pages/pacifierholders"
 import rattlers from "./pages/rattlers"
 import teethers from "./pages/teethers"
-import Home from "./pages/home"
+import home from "./pages/home"
 import Contact from "./pages/Contact"
 import Caro from "./components/Carousel"
 
@@ -23,7 +23,7 @@ const App = () => (
    <Banner />
    <Caro />
          <Switch>
-        <Route exact path="/home" component={Home} />
+        <Route exact path="/home" component={home} />
         <Route exact path="/beads" component={beads} />
         <Route exact path="/Contact" component={Contact} />
         <Route exact path="/bracelets" component={bracelets} />

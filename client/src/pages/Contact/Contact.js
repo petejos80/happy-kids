@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 export default class Contact extends React.Component {
   render() {
@@ -20,11 +20,7 @@ export default class Contact extends React.Component {
   <Label name="message" placeholder="Your message" />
   <Button>Submit</Button>
   </FormGroup>
-  
-
-         
-      //   <Button>Submit</Button>
-      // </Form> 
+  </Form>
       </div>
     );
   }
