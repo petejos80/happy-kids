@@ -13,16 +13,18 @@ import teethers from "./pages/teethers"
 import Home from "./pages/home"
 import Contact from "./pages/Contact"
 import Caro from "./components/Carousel"
-
+import Login from './components/Login';
+import Register from './components/Register';
 
 
 const App = () => (
-  <Router>
-    <div>     
+  <Router> 
+    <div> 
    <Nav />
    <Banner />
-   <Caro />
-         <Switch>
+      <Switch>
+        <Route path='/login' component={Login} />
+        <Route path='/register' component={Register} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/beads" component={beads} />
         <Route exact path="/Contact" component={Contact} />
@@ -33,10 +35,10 @@ const App = () => (
         <Route exact path="/teethers" component={teethers} />
       </Switch>
       <Footer />
-    </div>
-  </Router>
-  
+      </div>
+  </Router>  
 );
+document.getElementById('root')
 
 export default App;
 
