@@ -28,13 +28,13 @@ const App = () => (
         <Route path='/items' component={Items} />
         <Route path='/register' component={Register} />
         <Route exact path="/" component={Home} />
-        <Route exact path="/beads" component={Beads} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/bracelets" component={Bracelets} />
-        <Route exact path="/keychains" component={Keychains} />
-        <Route exact path="/pacifierholders" component={Pacifierholders} />
-        <Route exact path="/rattlers" component={Rattlers} />
-        <Route exact path="/teethers" component={Teethers} />
+        <Route exact path="/Beads" component={Beads} />
+        <Route exact path="/Contact" component={Contact} />
+        <Route exact path="/Bracelets" component={Bracelets} />
+        <Route exact path="/Keychains" component={Keychains} />
+        <Route exact path="/Pacifierholders" component={Pacifierholders} />
+        <Route exact path="/Rattlers" component={Rattlers} />
+        <Route exact path="/Teethers" component={Teethers} />
         <Route exact path="/About" component={About} />
 
       </Switch>
