@@ -13,21 +13,21 @@ const Footer = () =>(
 
           <h5 className="text-uppercase">Happy Kids Accessories</h5>
       
-       <div class="container">
+       <div className="container">
        <div className="row">
- <ul class="list-unstyled list-inline text-center"> 
-   <li class="list-unstyled">
+ <ul className="list-unstyled list-inline text-center"> 
+   <li className="list-unstyled">
      <a href="">
-      <img class="responsive-image one" src=".\images\LinkedIn.png" alt="image" height="20px" width="20px">
+      <img className="responsive-image one" src="../../public/images/LinkedIn.png" alt="image" height="20px" width="20px">
       </img>
     </a>
     </li>
     </ul>
     <div className="row">
     <ul>
-  <li class="list-unstyled list-inline">
+  <li className="list-unstyled list-inline">
      <a href="">
-     <img class="responsive-image two" src=".\images\FacebookIcon.png" alt="image" height="20px" width="20px">
+     <img className="responsive-image two" src="../../public/images/FacebookIcon.png" alt="image" height="20px" width="20px">
    </img>
    </a>
    </li>

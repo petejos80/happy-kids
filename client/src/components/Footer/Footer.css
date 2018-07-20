@@ -1,4 +1,6 @@
 .page-footer{
+    text-align: center;
+    justify-content: center;
     background-color:#008cba!important;
     max-height:8px!important;
     padding-top: 0px;
