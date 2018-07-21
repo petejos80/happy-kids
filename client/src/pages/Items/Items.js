@@ -85,7 +85,6 @@ class Items extends Component {
                 placeholder="Description (Optional)"
               />
               <FormBtn
-                // disabled={!(this.state.author && this.state.title)}
                 onClick={this.handleFormSubmit}
               >
                 Submit Item
