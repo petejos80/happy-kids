@@ -4,7 +4,9 @@ import { Jumbotron } from 'reactstrap';
 const Bracelets = (props) => {
   return (
     <div>
-      <Jumbotron>
+        <Jumbotron>
+            <h2>Bracelets</h2>
+        </Jumbotron>
       <div class="container">
   <div class="row">
     <div class="col">
@@ -53,7 +55,6 @@ const Bracelets = (props) => {
     </div>
   </div>
 </div>
-      </Jumbotron>
     </div>
   );
 };

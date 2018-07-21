@@ -4,8 +4,10 @@ import { Jumbotron } from 'reactstrap';
 const Rattlers = (props) => {
   return (
     <div>
-      <Jumbotron>
-        <h1 className="display-1">Rattlers</h1>
+        <Jumbotron>
+            <h2>Rattlers</h2>
+        </Jumbotron>
+        {/* <h1 className="display-1">Rattlers</h1> */}
         <div class="container">
   <div class="row">
     <div class="col">
@@ -54,7 +56,6 @@ const Rattlers = (props) => {
     </div>
   </div>
 </div>
-      </Jumbotron>
     </div>
   );
 };
