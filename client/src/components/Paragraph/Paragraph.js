@@ -2,19 +2,13 @@ import React from 'react';
 import "./Paragraph.css";
 
 const Paragraph = props => (
-  
-  <p className="p-style">Voluptate tempor occaecat duis dolor.Cillum culpa quis culpa cupidatat aliquip exercitation deserunt est.
-  Ea enim deserunt dolore nisi ex esse cillum do fugiat id veniam nulla. Aute excepteur ullamco commodo minim reprehenderit culpa aliquip nisi enim et ea magna.
-  Sit cupidatat est laborum esse velit occaecat magna Lorem id. Sunt pariatur aliquip consectetur eiusmod voluptate anim aliqua.
-  Velit amet nostrud consequat adipisicing qui magna. Consequat do non adipisicing aliqua exercitation incididunt elit adipisicing eiusmod labore.
-  Lorem ex deserunt exercitation laborum exercitation ea.
-  Nulla Lorem voluptate laboris Lorem amet reprehenderit consequat labore ea ipsum minim enim aute.
-  Sunt quis laborum minim nisi enim dolore id ex culpa non cupidatat.
-  In et Lorem irure commodo aliqua minim velit minim ad ad Lorem consectetur officia.
-  Ad deserunt reprehenderit voluptate ex enim aute nostrud id proident consectetur pariatur eu sunt cupidatat.
-  Adipisicing do minim cillum irure nisi non laboris consequat proident do qui elit ex.
-  Occaecat Lorem cillum pariatur minim tempor exercitation irure nostrud id amet commodo Lorem sunt.
-  </p>
+  <div>
+  <p className='p-style'>I am a mother of two little angels! They inspired me to start making personalized wooden toys that are fun and safe for children any age. <br /><strong>-Ekaterina Hawthorne</strong>
+<br /><br /><strong>Recommendations: </strong><br /><br/>What a beautiful toy! The beads are such a great quality, too! My son enjoys playing and chewing on it. Hand made toys just make it so much more special. 
+Definitely recommend!<br /><br />Since my daughter has been teething and drooling nonstop lately, she’s been finding things to put in her mouth left and right! Thankfully this gem caught her eyes and she hasn’t stopped playing with it! This custom pacifier clip/teether is the best and absolutely adorable. This is the perfect gift for baby showers or your little ones!<br /> <br />
+I ordered a custom teether as a baby shower gift. What an adorable gift it was! You won't be able to find anything like this from other retailers. Happy kids accessories worked with me on the design taking into consideration all my wants and needs. Will definetly order again!
+</p>
+</div>
   
 );
 export default Paragraph;
