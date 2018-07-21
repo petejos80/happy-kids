@@ -49,7 +49,7 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink className="link-style" href="/">
+                <NavLink href="/">
                   Home
                 </NavLink>
               </NavItem>
@@ -63,11 +63,15 @@ export default class Example extends React.Component {
                 {/* <NavItem>
                <NavLink className="link-style" href='/api/items'>Items</NavLink>
              </NavItem> */}
-                <DropdownToggle className="link-style" href='/api/items' nav caret>
+                <DropdownToggle href='/api/items' nav caret>
                  Items
                 </DropdownToggle>
 
                 <DropdownMenu right>
+                <DropdownItem>
+                    Beads <NavLink href="/beads/" />
+                  </DropdownItem>
+                  <DropdownItem divider />
                   <DropdownItem>
                     Bracelets <NavLink href="/bracelets/" />
                   </DropdownItem>
@@ -94,18 +98,18 @@ export default class Example extends React.Component {
                <NavLink className="link-style" href='/home'>About</NavLink>
              </NavItem> */}
               <NavItem>
-                <NavLink className="link-style" href="/about/">
+                <NavLink  href="/about/">
                   About
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="link-style" href="/contact/">
+                <NavLink  href="/contact/">
                   Contact
                 </NavLink>
               </NavItem>
 
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle className="link-style" nav caret>
+                <DropdownToggle  nav caret>
                   Sign In
                 </DropdownToggle>
                 <DropdownMenu right>

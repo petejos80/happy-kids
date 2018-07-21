@@ -19,8 +19,12 @@
   }
   .link-style{
       color: white!important;
+      margin-top: 40%;
   }
   .nav caret{
     color: white;
+  }
+  .link-nav{
+    color:white;
   }
   
