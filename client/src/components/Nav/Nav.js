@@ -112,15 +112,15 @@ export default class Example extends React.Component {
                 <DropdownToggle  nav caret>
                   Sign In
                 </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Sign In <NavLink href="/Login" />
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Register <NavLink href="/Register" />
-                  </DropdownItem>
-                </DropdownMenu>
+                  <DropdownMenu right>
+                    <DropdownItem>
+                      <NavLink href="/Login">Sign In</NavLink>
+                    </DropdownItem>
+                        <DropdownItem divider />
+                    <DropdownItem>
+                      <NavLink href="/Register">Register</NavLink>
+                    </DropdownItem>
+                  </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
           </Collapse>
