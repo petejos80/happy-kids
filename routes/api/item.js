@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var Item = require('../../models/Item');
 var passport = require('passport');
 require('../../config/passport')(passport);
+const itemsController = require("../../controllers/itemsController");
 
 /* GET ALL ITEMS */
 router.get('/', passport.authenticate('jwt', { session: false}), function(req, res) {
@@ -42,5 +43,9 @@ getToken = function (headers) {
     return null;
   }
 };
+
+router
+  .route("/:id")
+  .delete(itemsController.remove);
 
 module.exports = router;
