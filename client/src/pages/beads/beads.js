@@ -12,7 +12,7 @@ const Beads = (props) => {
     {/* <h1 className="display-1">Beads!</h1> */}
         <p className="lead">Personalized Beads</p>
        <a><img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/27973289_325633084591602_5029702829412128179_n.jpg?_nc_cat=0&oh=8c5f083ef1e34f9f7ea2b06e87ece6cd&oe=5BCCCEA2"alt="img" width="400px" onClick= "" /></a>
-        <h3> Bear Beads $0.00</h3>
+        <h3> Bear Beads $0.00</h3> <a href=".../modals/modal1" class="clickme">Click</a>
         <hr className="my-1" />
     </div>
     <div class="col">
