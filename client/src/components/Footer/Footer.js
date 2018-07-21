@@ -1,17 +1,15 @@
 import React from 'react';
 import { Col, Container, Row, Footer } from 'mdbreact';
-//import './Footer.css';
+import './Footer.css';
 
 class FooterPage extends React.Component {
     render(){
         return(
-            <Footer color="blue-grey" className="page-footer font-small lighten-5 fixed-bottom">
+            <Footer color="blue-grey" className="page-footer font-small lighten-5">
                 <div className="container-fluid text-center text-md-center">
-                    <Container>
-                        <Row className="py-4 d-flex align-items-center">
-                            {/* <Col md="6" lg="5" className="text-center text-md-left mb-4 mb-md-0">
-                                <h6 className="mb-0 white-text">Get connected with us on social networks!</h6>
-                            </Col> */}
+                    <Container className ="footer-contents">
+                        <Row  className ="footer-contents" className="py-4 d-flex align-items-center">
+                      
                             <Col md="6" lg="7" className="text-center text-md-right">
                                 <a className="fb-ic ml-0"><i className="fa fa-facebook white-text mr-lg-4"> </i></a>
                                 <a className="tw-ic"><i className="fa fa-twitter white-text mr-lg-4"> </i></a>
@@ -23,7 +21,7 @@ class FooterPage extends React.Component {
                     </Container>
                 </div>
                 <Container className="mt-5 mb-4 text-center text-md-left">
-                    <Row className="mt-3">
+                    <Row  className ="footer-contents"className="mt-3">
                         <Col md="3" lg="4" xl="3" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><strong>Happy Kids</strong></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
@@ -69,76 +67,4 @@ export default FooterPage;
 
 
 
-// import React from "react";
-// import "./Footer.css";
-// const Footer = () => (
-//   <footer className="page-footer font-large fixed-bottom">
-//     <div className="container-fluid text-center text-md-center">
-//       <div className="row">
-//         <div className="col-md-6 mt-md-0 mt-3">
-//           <h5 className="text-uppercase">Happy Kids Accessories</h5>
-//               <ul className="list-unstyled list-inline text-center">
-//                 <li className="list-unstyled">
-//                   <a href="https://github.com/sandimas01/happy-kids">
-//                     <img
-//                       className="responsive-image one"
-//                       src="..\images\LinkedIn.png"
-//                       alt="image"
-//                       height="10px"
-//                       width="10px"
-//                     />
-//                   </a>
-//                 </li>
-             
-//                   <li className="list-unstyled list-inline">
-//                     <a href="https://www.facebook.com/pg/happykidsbeads/photos/?tab=albums">
-//                       <img
-//                         className="responsive-image two"
-//                         src="..\images\FacebookIcon.png"
-//                         alt="image"
-//                         height="1px"
-//                         width="1px"
-//                       />
-//                     </a>
-//                   </li>
-//                 </ul>
-//           </div>
-//         </div>
-//       </div>
-//   </footer>
-// );
-
-
-// export default Footer;
-//           <h5 className="text-uppercase">Happy Kids Accessories</h5>
-      
-//        <div className="container">
-//        <div className="row">
-//  <ul className="list-unstyled list-inline text-center"> 
-//    <li className="list-unstyled">
-//      <a href="">
-//       <img className="responsive-image one" src="..\images\LinkedIn.png" alt="image" height="10px" width="10px">
-//       </img>
-//     </a>
-//     </li>
-//     </ul>
-//     <div className="row">
-//     <ul>
-//   <li className="list-unstyled list-inline">
-//      <a href="">
-//      <img className="responsive-image two" src="..\images\FacebookIcon.png" alt="image" height="1px" width="1px">
-//    </img>
-//    </a>
-//    </li>
-//  </ul>
-//  </div>
-// </div>
-// </div>
-// </div>
-// </div>
-// </div>
-//   </footer>
-// );
-
-//   export default Footer;
 

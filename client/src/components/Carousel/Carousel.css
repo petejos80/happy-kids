@@ -3,11 +3,11 @@ img{
     width:400px!important;
 }
 .carousel {
-    position: relative;
+    /* position: relative; */
     margin-top: 0!important;
     width: 500px!important;
     float:right!important;
-    margin-right: 10%;
+    margin-bottom: 40%!important
   }
 
  
