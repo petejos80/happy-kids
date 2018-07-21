@@ -1,6 +1,7 @@
 import React from "react";
 import { Jumbotron } from 'reactstrap';
 
+
 const Beads = (props) => {
   return (
     <div>
