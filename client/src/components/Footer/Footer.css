@@ -1,10 +1,17 @@
-.page-footer{
-    background-color:#008cba!important;
-    max-height:8px!important;
+ .page-footer{
+    width:100%!important;
     padding-top: 0px;
-    padding-bottom: 40px!important
-}
-.footer-copyright{
+    padding-bottom: 40px!important;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll!important;
+    background-position: 0% 0%!important;
+    /* position: fixed!important; */
+    bottom: 0pt!important;
+    left: 0pt!important;
+    margin:auto!important }
+
+/* .footer-copyright{
    font-size: 10px;
    float: right;
    margin-bottom:100px
@@ -19,4 +26,4 @@ h5{
     height: 30px!important;
     width: 30px!important;
     padding-bottom: 30%;
-}
+} */

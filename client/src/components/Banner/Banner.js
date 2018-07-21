@@ -6,16 +6,17 @@ const Banner = props => (
     <Jumbotron
       style={{
         height: 300,
-        color: "white",
+        // color: "white",
         clear: "both",
         backgroundColor: "#888",
         textAlign: "center",
         marginTop: 0,
         marginLeft: 120,
-        marginRight: 120
+        marginRight: 120,
+       
       }}
     >
-      <h1 style={{ fontSize: 80 }} className="display-1">
+      <h1 style={{ fontSize: 60 }} className="display-1">
         Welcome to Happy Kids Accessories!
       </h1>
       <br />
