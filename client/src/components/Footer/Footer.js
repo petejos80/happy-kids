@@ -5,11 +5,21 @@ import './Footer.css';
 class FooterPage extends React.Component {
     render(){
         return(
+<<<<<<< HEAD
             <Footer color="blue-grey" className="page-footer font-small lighten-5">
                 <div className="container-fluid text-center text-md-center">
                     <Container className ="footer-contents">
                         <Row  className ="footer-contents" className="py-4 d-flex align-items-center">
                       
+=======
+            <Footer>
+                <div className="container-fluid text-center text-md-center">
+                    <Container>
+                        <Row className="py-4 d-flex align-items-bottom">
+                            {/* <Col md="6" lg="5" className="text-center text-md-left mb-4 mb-md-0">
+                                <h6 className="mb-0 white-text">Get connected with us on social networks!</h6>
+                            </Col> */}
+>>>>>>> b55282998e78f0fa2f9a9c2c7a0b0ecf8672018d
                             <Col md="6" lg="7" className="text-center text-md-right">
                                 <a className="fb-ic ml-0"><i className="fa fa-facebook white-text mr-lg-4"> </i></a>
                                 <a className="tw-ic"><i className="fa fa-twitter white-text mr-lg-4"> </i></a>

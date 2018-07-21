@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  .page-footer{
     width:100%!important;
     padding-top: 0px;
@@ -11,3 +12,30 @@
     left: 0pt!important;
     margin:auto!important }
 
+=======
+.page-footer{
+    position: static;
+    background-color:#008cba!important;
+    max-height:8px!important;
+    padding-top: 0px;
+    padding-bottom: 40px!important
+}
+.footer-copyright{
+    position: absolute;
+
+   font-size: 10px;
+   float: right;
+   margin-bottom:100px
+}
+h5{
+    font-size: 12px;
+    color: white;
+    
+    margin-bottom:0;
+}
+.responsive-image {
+    height: 30px!important;
+    width: 30px!important;
+    padding-bottom: 30%;
+}
+>>>>>>> b55282998e78f0fa2f9a9c2c7a0b0ecf8672018d
