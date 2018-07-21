@@ -26,8 +26,7 @@ class FooterPage extends React.Component {
                         <Col md="3" lg="4" xl="3" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><strong>Happy Kids</strong></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
-                            <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit
-                                amet, consectetur adipisicing elit.</p>
+                            <p className='p-style-footer'>I am a mother of two little angels! They inspired me to start making personalized wooden toys that are fun and safe for children any age. <br /><strong>-Ekaterina Hawthorne</strong></p>
                         </Col>
                         <Col md="2" lg="2" xl="2" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><a href="/api/items"><strong>Items</strong></a></h6>

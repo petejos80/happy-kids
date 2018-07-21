@@ -1,7 +1,9 @@
  .p-style {
       width:500px;
       height: 200px;
-      margin-left:10%;
+      /* float: left !important;  */
+      padding-bottom: 60%;
+      margin-left:30%!important;
       margin-right:8%;
       padding-right: 0;
   } 
