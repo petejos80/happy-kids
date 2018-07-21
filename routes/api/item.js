@@ -7,7 +7,6 @@ require('../../config/passport')(passport);
 
 /* GET ALL ITEMS */
 router.get('/', passport.authenticate('jwt', { session: false}), function(req, res) {
-  // router.get('/', function(req, res) {
   var token = getToken(req.headers);
   if (token) {
     Item.find(function (err, items) {
@@ -20,7 +19,6 @@ router.get('/', passport.authenticate('jwt', { session: false}), function(req, r
 });
 
 router.post('/', passport.authenticate('jwt', { session: false}), function(req, res) {
-// router.post('/', function(req, res) {
   var token = getToken(req.headers);
   if (token) {
     Item.create(req.body, function (err, post) {
