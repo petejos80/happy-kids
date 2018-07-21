@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import axios from 'axios';
 
 
 class Items extends Component {
@@ -17,7 +18,22 @@ class Items extends Component {
   };
 
   componentDidMount() {
-    this.loadItems();
+    axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
+    axios.get('/api/items')
+      .then(res => {
+        this.setState({ items: res.data });
+        console.log(this.state.items);
+      })
+      .catch((error) => {
+        if(error.response.status === 401) {
+          this.props.history.push("/login");
+        }
+      });
+  }
+
+  logout = () => {
+    localStorage.removeItem('jwtToken');
+    window.location.reload();
   }
 
   loadItems = () => {
@@ -94,6 +110,7 @@ class Items extends Component {
           <Col size="md-9 sm-12">
             <Jumbotron>
               <h1>Items Currently for Sale</h1>
+              <button class="btn btn-primary" onClick={this.logout}>Logout</button>
             </Jumbotron>
             {this.state.items.length ? (
               <List>
