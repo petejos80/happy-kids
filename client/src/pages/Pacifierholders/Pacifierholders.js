@@ -5,6 +5,8 @@ const Pacifierholders = (props) => {
   return (
     <div>
       <Jumbotron>
+        <h2>Pacifier Holders</h2>
+      </Jumbotron>
 
         <div class="container">
   <div class="row">
@@ -54,7 +56,6 @@ const Pacifierholders = (props) => {
     </div>
   </div>
 </div>
-      </Jumbotron>
     </div>
   );
 };
