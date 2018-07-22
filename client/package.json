@@ -22,6 +22,15 @@
     "react-scripts": "^1.1.4",
     "session": "^0.1.0"
   },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^16.0.0",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "^16.0.0",
+    "react-transition-group": "^1.1.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

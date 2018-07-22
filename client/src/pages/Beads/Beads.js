@@ -1,6 +1,6 @@
 import React from "react";
 import { Jumbotron } from 'reactstrap';
-
+// import ModalPage from "../../components/Modal1"
 
 const Beads = (props) => {
   return (
@@ -55,6 +55,7 @@ const Beads = (props) => {
     </div>
   </div>
 </div>
+      {/* <ModalPage /> */}
       </Jumbotron>
     </div>
   );

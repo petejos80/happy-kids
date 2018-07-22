@@ -16,6 +16,7 @@ import Login from './components/Login';
 import Register from './components/Register'
 import About from './pages/About'
 import Items from './pages/Items';
+import Shop from './pages/Shop'
 
 const App = () => (
   <Router> 
@@ -36,7 +37,7 @@ const App = () => (
         <Route exact path="/rattlers" component={Rattlers} />
         <Route exact path="/teethers" component={Teethers} />
         <Route exact path="/about" component={About} />
-
+        <Route exact path="/shop" component={Shop} />
       </Switch>
       <Footer />
       </div>
