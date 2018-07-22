@@ -71,7 +71,7 @@ class Items extends Component {
         price: this.state.price,
         description: this.state.description
       })
-        .then(res => this.loadBooks())
+        .then(res => this.loadItems())
         .catch(err => console.log(err));
     }
   };
