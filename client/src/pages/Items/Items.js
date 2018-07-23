@@ -17,10 +17,6 @@ class Items extends Component {
     description: ""
   };
 
-  // componentDidMount() {
-  //   this.loadItems();
-  // }
-
   componentDidMount() {
     axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
     axios.get('/api/items')
