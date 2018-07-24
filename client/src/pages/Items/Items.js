@@ -8,6 +8,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import axios from "axios";
+import "./Items.css";
 
 class Items extends Component {
   state = {
@@ -159,7 +160,7 @@ class Items extends Component {
                <Container fluid>
                  <Row>
                 {this.state.items.map(item => (
-                    <Col size="md-6">
+                    <Col size="md-6" className="item-card">
                   <ListItem key={item._id}>
                     <Link to={"/items/" + item._id}>
                       <strong>
