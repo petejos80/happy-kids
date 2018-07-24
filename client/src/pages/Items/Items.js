@@ -42,7 +42,7 @@ class Items extends Component {
     API.getItems()
       .then(res => {
         console.log(res)
-        this.setState({ items: res.data, name: "", price: "", description: "" })
+        this.setState({ items: res.data, name: "", price: "", image: "", category: "", description: "" })
       }
       )
       .catch(err => console.log(err));
