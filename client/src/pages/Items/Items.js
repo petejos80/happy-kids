@@ -136,7 +136,7 @@ class Items extends Component {
                   <ListItem key={item._id}>
                     <Link to={"/items/" + item._id}>
                       <strong>
-                        {item.name} priced at {item.price}
+                        {item.name} priced at {item.price} <img src={item.image} />
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteItem(item._id)} />
