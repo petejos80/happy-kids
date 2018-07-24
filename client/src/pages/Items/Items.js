@@ -14,6 +14,8 @@ class Items extends Component {
     items: [],
     name: "",
     price: "",
+    image: "",
+    category: "",
     description: ""
   };
 
@@ -61,10 +63,12 @@ class Items extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.name && this.state.price) {
+    if (this.state.name && this.state.price  && this.state.image && this.state.category) {
       API.saveItem({
         name: this.state.name,
         price: this.state.price,
+        image: this.state.image, 
+        category: this.state.category,
         description: this.state.description
       })
         .then(res => this.loadItems())
@@ -82,8 +86,7 @@ class Items extends Component {
               {localStorage.getItem('jwtToken') &&
                 <button class="btn btn-primary" onClick={this.logout}>Logout</button>
               }
-            </Jumbotron>
-           
+            </Jumbotron>        
             <form>
               <Input
                 value={this.state.name}
@@ -97,6 +100,18 @@ class Items extends Component {
                 name="price"
                 placeholder="Price (required)"
               />
+              <Input
+                value={this.state.image}
+                onChange={this.handleInputChange}
+                name="image"
+                placeholder="Image URL (required)"
+              />
+              <Input
+                value={this.state.category}
+                onChange={this.handleInputChange}
+                name="category"
+                placeholder="Category (required)"
+              />
               <TextArea
                 value={this.state.description}
                 onChange={this.handleInputChange}
@@ -104,7 +119,7 @@ class Items extends Component {
                 placeholder="Description (Optional)"
               />
               <FormBtn
-                // disabled={!(this.state.author && this.state.title)}
+                disabled={!(this.state.name && this.state.price && this.state.image && this.state.category)}
                 onClick={this.handleFormSubmit}
               >
                 Submit Item
