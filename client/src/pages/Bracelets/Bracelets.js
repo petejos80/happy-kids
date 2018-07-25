@@ -21,10 +21,9 @@ class Bracelets extends Component {
   };
 
   componentDidMount() {
-    // axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
     axios.get('/api/items')
       .then(res => {
-        this.setState({ items: res.data });
+        this.setState({ items: res.data.filter(item => item.category === 'Bracelets') }, () => console.log(this.state));
         console.log(this.state.items);
       })
       .catch((error) => {
@@ -33,11 +32,6 @@ class Bracelets extends Component {
         }
       });
   }
-
-//   logout = () => {
-//     localStorage.removeItem('jwtToken');
-//     window.location.reload();
-//   }
 
   loadItems = () => {
     API.getItems()
@@ -55,79 +49,22 @@ class Bracelets extends Component {
       .catch(err => console.log(err));
   };
 
-//   handleInputChange = event => {
-//     const { name, value } = event.target;
-//     this.setState({
-//       [name]: value
-//     });
-//   };
+filterItems(bracelets) {
+    const myItems = this.state.items
+    const newArray = myItems.filter(item => item.category !== 'Bracelets')
+    this.setState({
+      items: newArray
+    })
+    console.log('handle remove runned', bracelets, myItems, newArray)
+  }
 
-// SAVE THIS FOR LATER ********
-//   handleFormSubmit = event => {
-//     event.preventDefault();
-//     if (this.state.name && this.state.price  && this.state.image && this.state.category) {
-//       API.saveItem({
-//         name: this.state.name,
-//         price: this.state.price,
-//         image: this.state.image, 
-//         category: this.state.category,
-//         description: this.state.description
-//       })
-//         .then(res => this.loadItems())
-//         .catch(err => console.log(err));
-//     }
-//   };
+
+
 
   render() {
     return (
       <Container fluid>
         <Row>
-          {/* <Col size="md-3">
-            <Jumbotron>
-              <h1>Add Items for Sale</h1>
-              {localStorage.getItem('jwtToken') &&
-                <button class="btn btn-primary" onClick={this.logout}>Logout</button>
-              }
-            </Jumbotron>        
-            <form>
-              <Input
-                value={this.state.name}
-                onChange={this.handleInputChange}
-                name="name"
-                placeholder="Name (required)"
-              />
-              <Input
-                value={this.state.price}
-                onChange={this.handleInputChange}
-                name="price"
-                placeholder="Price (required)"
-              />
-              <Input
-                value={this.state.image}
-                onChange={this.handleInputChange}
-                name="image"
-                placeholder="Image URL (required)"
-              />
-              <Input
-                value={this.state.category}
-                onChange={this.handleInputChange}
-                name="category"
-                placeholder="Category (required)"
-              />
-              <TextArea
-                value={this.state.description}
-                onChange={this.handleInputChange}
-                name="description"
-                placeholder="Description (Optional)"
-              />
-              <FormBtn
-                disabled={!(this.state.name && this.state.price && this.state.image && this.state.category)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Item
-              </FormBtn>
-            </form>
-          </Col> */}
           <Col size="md-9 sm-12">
             <Jumbotron>
               <h1>Items Currently for Sale</h1>
