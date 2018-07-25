@@ -55,6 +55,7 @@ class Items extends Component {
           image: ""
         });
       })
+
       .catch(err => console.log(err));
   };
 
@@ -163,6 +164,7 @@ class Items extends Component {
                     <Col size="md-6" className="item-card">
                   <ListItem key={item._id}>
                     <Link to={"/items/" + item._id}>
+                      <div className='Card'>
                       <strong>
                         <p>
                           <img src={item.image} />
@@ -172,6 +174,7 @@ class Items extends Component {
                         </h4>
                         <p>Category: {item.category}</p>
                       </strong>
+                      </div>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteItem(item._id)} />
                   </ListItem>
