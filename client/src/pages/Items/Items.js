@@ -135,9 +135,11 @@ class Items extends Component {
                 {this.state.items.map(item => (
                   <ListItem key={item._id}>
                     <Link to={"/items/" + item._id}>
+                      <div className='Card'>
                       <strong>
                         {item.name} priced at {item.price} <img src={item.image} />
                       </strong>
+                      </div>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteItem(item._id)} />
                   </ListItem>
