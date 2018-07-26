@@ -1,70 +1,3 @@
-
-// import React from "react";
-// import { Jumbotron } from 'reactstrap';
-
-
-// const Beads = (props) => {
-//   return (
-//     <div>
-//         <Jumbotron>
-//             <h2>Beads</h2>
-//         </Jumbotron>
-
-//         <div class="container">
-//   <div class="row">
-//     <div class="col">
-//     {/* <h1 className="display-1">Beads!</h1> */}
-//         <p className="lead">Personalized Beads</p>
-//        <a><img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/27973289_325633084591602_5029702829412128179_n.jpg?_nc_cat=0&oh=8c5f083ef1e34f9f7ea2b06e87ece6cd&oe=5BCCCEA2"alt="img" width="400px" onClick= "" /></a>
-//         <h3> Bear Beads $0.00</h3>
-//         <hr className="my-1" />
-//     </div>
-//     <div class="col">
-//     {/* <h1 className="display-2">Beads!</h1> */}
-//         <p className="lead">Personalized Beads</p>
-//         <a><img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/28168076_325633127924931_3318407062343312459_n.jpg?_nc_cat=0&oh=f9bbd9baafdb39e113ad6db91a9fd6c5&oe=5BCF7FE4"alt="img" width="400px" onClick=""/></a>
-//         <h3> Butterfly Beads $0.00</h3>
-//         <hr className="my-2" />
-//     </div>
-//   </div>
-//   <div class="row">
-//     <div class="col">
-//     {/* <h1 className="display-3">Beads!</h1> */}
-//         <p className="lead">Personalized Beads</p>
-//         <a><img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/27972674_325633174591593_5432447413240257522_n.jpg?_nc_cat=0&oh=7490056b9c8f2b1cab7a9774fc909acf&oe=5BE76342"alt="img" width="400px" onClick=""/></a>
-//         <h3> Heart Beads $0.00</h3>
-//         <hr className="my-3" />
-//     </div>
-//     <div class="col">
-//     {/* <h1 className="display-3">Beads!</h1> */}
-//         <p className="lead">Personalized Beads</p>
-//         <a><img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/28059215_325633197924924_8483100059065651402_n.jpg?_nc_cat=0&oh=5adcdad77f4212b9604ce5f5298e0165&oe=5BE1345E"alt="img" width="400px" onClick=""/></a>
-//         <h3> Character Beads $0.00</h3>
-//         <hr className="my-3" />
-//     </div>
-//     <div class="col">
-//     {/* <h1 className="display-3">Beads!</h1> */}
-//         <p className="lead">Personalized Beads</p>
-//         <a><img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/30624526_344669239354653_1218400474618148491_n.jpg?_nc_cat=0&oh=9da8830f6246ce603ec13eac3eed34cf&oe=5BCA5844"alt="img" width="400px" onClick=""/></a>
-//         <h3> Train Beads $0.00</h3>
-//         <hr className="my-3" />
-//     </div>
-//     <div class="col">
-//     {/* <h1 className="display-3">Beads!</h1> */}
-//         <p className="lead">Personalized Beads</p>
-//         <a><img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/30515711_344669279354649_4393466501271026584_n.jpg?_nc_cat=0&oh=3774a5df4f6df767f0c235aeb4ec3a11&oe=5BC6A118"alt="img" width="400px" onClick=""/></a>
-//         <h3> Flower Beads $0.00</h3>
-//         <hr className="my-3" />
-//     </div>
-//   </div>
-// </div>
-//     </div>
-//   );
-// };
-
-// export default Beads;
-
-
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
 import Jumbotron from "../../components/Jumbotron";
@@ -75,7 +8,6 @@ import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import axios from 'axios';
 import Items from '../Items';
-
 
 
 class Beads extends Component {
@@ -89,7 +21,6 @@ class Beads extends Component {
   };
 
   componentDidMount() {
-
     axios.get('/api/items')
       .then(res => {
         this.setState({ items: res.data.filter(item => item.category === 'Beads') }, () => console.log(this.state));
@@ -118,14 +49,17 @@ class Beads extends Component {
       .catch(err => console.log(err));
   };
 
-filterItems(beads) {
+filterItems(bracelets) {
     const myItems = this.state.items
     const newArray = myItems.filter(item => item.category !== 'Beads')
     this.setState({
       items: newArray
     })
-    console.log('handle remove runned', beads, myItems, newArray)
+    console.log('handle remove runned', bracelets, myItems, newArray)
   }
+
+
+
 
   render() {
     return (
@@ -149,69 +83,6 @@ filterItems(beads) {
                     <DeleteBtn onClick={() => this.deleteItem(item._id)} />
                   </ListItem>
                 ))}
-
-         <Row>
-         {/* <Col size="md-3">
-            <Jumbotron>
-              <h1>Add Items for Sale</h1>
-              {localStorage.getItem('jwtToken') &&
-                <button class="btn btn-primary" onClick={this.logout}>Logout</button>
-              }
-            </Jumbotron>
-           
-            <form>
-              <Input
-                value={this.state.name}
-                onChange={this.handleInputChange}
-                name="name"
-                placeholder="Name (required)"
-              />
-              <Input
-                value={this.state.price}
-                onChange={this.handleInputChange}
-                name="price"
-                placeholder="Price (required)"
-              />
-              <TextArea
-                value={this.state.description}
-                onChange={this.handleInputChange}
-                name="description"
-                placeholder="Description (Optional)"
-              />
-              <FormBtn
-                // disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Item
-              </FormBtn>
-            </form>
-          </Col> */}
-          <Col size="md-9 sm-12">
-            <Jumbotron>
-              <h1>Items Currently for Sale</h1>
-           
-            </Jumbotron>
-            {this.state.items.length ? (
-              <List>
-               <Container fluid>
-                 <Row>
-                {this.state.items.map(item => (
-                    <Col size="md-6" className="item-card">
-                  <ListItem key={item._id}>
-                    <Link to={"/items/" + item._id}>
-                      <strong>
-                        <p>
-                          <img src={item.image} />
-                        </p>
-                        <h4>
-                          {item.name} {item.price}
-                        </h4>
-                        <p>Category: {item.category}</p>
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteItem(item._id)} />
-                  </ListItem>
-                  ))}
               </List>
             ) : (
               <h3>No Results to Display</h3>
@@ -233,3 +104,67 @@ export default Beads;
 
 
 
+
+
+// import React from "react";
+// import { Jumbotron } from 'reactstrap';
+
+// const Bracelets = (props) => {
+//   return (
+//     <div>
+//         <Jumbotron>
+//             <h2>Bracelets</h2>
+//         </Jumbotron>
+//       <div class="container">
+//   <div class="row">
+//     <div class="col">
+//     {/* <h1 className="display-1">Bracelets!</h1> */}
+//         <p className="lead">Personalized Bracelets</p>
+//         <a><img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-0/p200x200/29187031_334471810374396_282263315034933398_n.jpg?_nc_cat=0&oh=f36590018dd745004395378aa70616da&oe=5BE6EDE7"alt="img" width="400px" onCLick=""/></a>
+//         <h3> Baby Name with Crown Bead Bracelet $0.00</h3>
+//         <hr className="my-1" />
+//     </div>
+//     <div class="col">
+//     {/* <h1 className="display-2">Bracelets!</h1> */}
+//         <p className="lead">Personalized Bracelets</p>
+//         <a><img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/30582157_344667109354866_2588682906968552893_n.jpg?_nc_cat=0&oh=c611de8b7ebb009a21b015f7244613bb&oe=5BE2FFF9"alt="img" width="400px" onClick=""/></a>
+//         <h3> Baby Name Bracelet with bell $0.00</h3>
+//         <hr className="my-2" />
+//     </div>
+//   </div>
+//   <div class="row">
+//     <div class="col">
+//     {/* <h1 className="display-3">Bracelets!</h1> */}
+//         <p className="lead">Personalized Bracelets</p>
+//         <a><img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/30594499_344667119354865_8664196475192133823_n.jpg?_nc_cat=0&oh=48ed9196d04228df9e33f39e76a06b38&oe=5BE33A57"alt="img" width="400px" onClick=""/></a>
+//         <h3> Baby Name with Star Bead Bracelet $0.00</h3>
+//         <hr className="my-3" />
+//     </div>
+//     <div class="col">
+//     {/* <h1 className="display-3">Bracelets!</h1> */}
+//         <p className="lead">Personalized Bracelets</p>
+//         <a><img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/30595054_344667136021530_7101673075619063207_n.jpg?_nc_cat=0&oh=1c49a1043fb94d8f1b70bdc2e2ded63a&oe=5BCD3B56"alt="img" width="400px" onClick=""/></a>
+//         <h3> Baby Name with Flower Bead Bracelet $0.00</h3>
+//         <hr className="my-3" />
+//     </div>
+//     <div class="col">
+//     {/* <h1 className="display-3">Bracelets!</h1> */}
+//         <p className="lead">Personalized Bracelets</p>
+//         <a><img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/30531333_344667146021529_1310139035605556885_n.jpg?_nc_cat=0&oh=01ec457328c2d086de79dc32341ed074&oe=5BE992CB"alt="img" width="400px" onClick=""/></a>
+//         <h3> Baby Name with Star Bead Bracelet $0.00</h3>
+//         <hr className="my-3" />
+//     </div>
+//     <div class="col">
+//     {/* <h1 className="display-3">Bracelets!</h1> */}
+//         <p className="lead">Personalized Bracelets</p>
+//         <a><img src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/30623724_344667156021528_724379104431942178_n.jpg?_nc_cat=0&oh=0aa7043be0e420a63808cb558df536e8&oe=5BD850DF"alt="img" width="400px" onClick=""/></a>
+//         <h3> Baby Name with Character Bead Bracelet $0.00</h3>
+//         <hr className="my-3" />
+//     </div>
+//   </div>
+// </div>
+//     </div>
+//   );
+// };
+
+// export default Bracelets;
