@@ -38,11 +38,11 @@ const itemSeed = [
   },
 
   {
-    name: "",
-    image: "",
-    price: "",
-    category: "",
-    description: "",
+    name: "TEETHER WITH SENSORY LOOP",
+    image: "https://scontent.ffcm1-1.fna.fbcdn.net/v/t1.0-9/28276418_324405004714410_8704849844905985608_n.jpg?_nc_cat=0&oh=3f5eeda3582c05a823cfa06406e68a00&oe=5BD58347",
+    price: "$15",
+    category: "Teethers",
+    description: "✅The wooden ring is a natural teether. Your little one will love to chew on it.",
     date: new Date(Date.now())
   },
 
