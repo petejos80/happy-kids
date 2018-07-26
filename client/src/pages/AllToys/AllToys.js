@@ -120,17 +120,18 @@ class AllToys extends Component {
           </Col> */}
           <Col size="md-9 sm-12">
             <Jumbotron>
-              <h1>All Items Currently for Sale</h1>
+              <h1 className='toy-title'>All Items Currently for Sale</h1>
            
             </Jumbotron>
             {this.state.items.length ? (
           
                <Container fluid>
-                 <Row>
+               <div className='row-objects'>
+                 <Row >
                 {this.state.items.map(item => (
                     <Col size="md-6">
                   <ListItem key={item._id}>
-                    <Link to={"/items/" + item._id}>
+                    <List value={"/items/" + item._id}>
                     <div className='Card'>
                       <strong>
                         <p>
@@ -142,13 +143,14 @@ class AllToys extends Component {
                         <p>Category: {item.category}</p>
                       </strong>
                       </div>
-                    </Link>
+                    </List>
                     <DeleteBtn onClick={() => this.deleteItem(item._id)} />
                   </ListItem>
                   </Col>
                 ))}
                 
                 </Row>
+                </div>
                 </Container>
               
             ) : (
