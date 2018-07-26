@@ -1,0 +1,9 @@
+.keychain-img {
+    height: 100% !important;
+    width: 100% !important;
+    border-style: none;
+    text-align: center;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+}
