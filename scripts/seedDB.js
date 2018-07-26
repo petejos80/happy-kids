@@ -47,11 +47,11 @@ const itemSeed = [
   },
 
   {
-    name: "",
-    image: "",
-    price: "",
-    category: "",
-    description: "",
+    name: "RATTLING TEETHER",
+    image: "https://scontent.ffcm1-1.fna.fbcdn.net/v/t1.0-9/27867696_324405048047739_8624340297793119802_n.jpg?_nc_cat=0&oh=3057259ddc853b3fe0972e388ea7701c&oe=5BCE26E5",
+    price: "$18",
+    category: "Rattlers",
+    description: "✅The most popular toy. Unique and so special, made with love. All the knots securely sealed.",
     date: new Date(Date.now())
   },
 
