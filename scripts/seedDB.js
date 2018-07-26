@@ -20,6 +20,15 @@ const itemSeed = [
   },
   
   {
+    name: "BRACELET",
+    image: "https://scontent.ffcm1-1.fna.fbcdn.net/v/t1.0-9/28166653_324404981381079_1022978304039791748_n.jpg?_nc_cat=0&oh=9e0b4483d30ada13378d5c77d68a234f&oe=5BCAE5C0",
+    price: "$8",
+    category: "Bracelets",
+    description: "✨Measure your little girl’s wrist to order one",
+    date: new Date(Date.now())
+  },
+
+  {
     name: "",
     image: "",
     price: "",
