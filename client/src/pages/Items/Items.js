@@ -156,7 +156,7 @@ class Items extends Component {
            
             </Jumbotron>
             {this.state.items.length ? (
-              <List>
+              
                 <Container fluid>
                  <Row>
                   {this.state.items.map(item => (
@@ -182,7 +182,7 @@ class Items extends Component {
                 
                 </Row>
                 </Container>
-              </List>
+             
             ) : (
               <h3>No Results to Display</h3>
             )}

@@ -7,7 +7,8 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import axios from 'axios';
-import "./AllToys.css";
+import "./AllToys.css"
+
 
 
 class AllToys extends Component {
@@ -80,7 +81,7 @@ class AllToys extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <Container fluid className="fluid-container">
          <Row>
          {/* <Col size="md-3">
             <Jumbotron>
@@ -123,13 +124,14 @@ class AllToys extends Component {
            
             </Jumbotron>
             {this.state.items.length ? (
-              <List>
+          
                <Container fluid>
                  <Row>
                 {this.state.items.map(item => (
-                    <Col size="md-6" className="item-card">
+                    <Col size="md-6">
                   <ListItem key={item._id}>
                     <Link to={"/items/" + item._id}>
+                    <div className='Card'>
                       <strong>
                         <p>
                           <img class = "allimg" src={item.image} />
@@ -139,6 +141,7 @@ class AllToys extends Component {
                         </h4>
                         <p>Category: {item.category}</p>
                       </strong>
+                      </div>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteItem(item._id)} />
                   </ListItem>
@@ -147,7 +150,7 @@ class AllToys extends Component {
                 
                 </Row>
                 </Container>
-              </List>
+              
             ) : (
               <h3>No Results to Display</h3>
             )}

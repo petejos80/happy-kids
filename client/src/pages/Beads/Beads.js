@@ -8,6 +8,7 @@ import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import axios from 'axios';
 import Items from '../Items';
+import "./Beads.css"
 
 
 class Beads extends Component {
@@ -64,38 +65,31 @@ filterItems(bracelets) {
   render() {
     return (
       <Container fluid>
-        <Row>
-          <Col size="md-9 sm-12">
-            <Jumbotron>
-              <h1>Items Currently for Sale</h1>
-            </Jumbotron>
-            {this.state.items.length ? (
-              <List>
-                {this.state.items.map(item => (
+                 <Row>
+                  {this.state.items.map(item => (
+                  <Col size="md-4" className="item-card">
                   <ListItem key={item._id}>
                     <Link to={"/items/" + item._id}>
-                    <div className='Card'>
+                      <div className='Card'>
                       <strong>
-                      <p>
-                          <img src={item.image} />
+
+                        <p>
+                          <img class="bead-img" src={item.image} />
                         </p>
                         <h4>
                           {item.name} {item.price}
                         </h4>
                         <p>Category: {item.category}</p>
                       </strong>
-                    </div>
+                      </div>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteItem(item._id)} />
                   </ListItem>
+                  </Col>
                 ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col>
-        </Row>
-      </Container>
+                
+                </Row>
+                </Container>
     );
   }
 }
