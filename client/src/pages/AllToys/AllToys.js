@@ -7,6 +7,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import axios from 'axios';
+import "./AllToys.css";
 
 
 class AllToys extends Component {
@@ -131,7 +132,7 @@ class AllToys extends Component {
                     <Link to={"/items/" + item._id}>
                       <strong>
                         <p>
-                          <img src={item.image} />
+                          <img class = "allimg" src={item.image} />
                         </p>
                         <h4>
                           {item.name} {item.price}
