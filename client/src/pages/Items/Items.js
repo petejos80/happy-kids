@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
 import Jumbotron from "../../components/Jumbotron";
-
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
@@ -98,7 +97,7 @@ class Items extends Component {
         <Row>
           <Col size="md-3">
             <Jumbotron>
-              <h1>Add Items for Sale</h1>
+              <h1>Add Items</h1>
               {localStorage.getItem("jwtToken") && (
                 <button class="btn btn-primary" onClick={this.logout}>
                   Logout
@@ -158,16 +157,16 @@ class Items extends Component {
             </Jumbotron>
             {this.state.items.length ? (
               <List>
-               <Container fluid>
+                <Container fluid>
                  <Row>
-                {this.state.items.map(item => (
-                    <Col size="md-6" className="item-card">
+                  {this.state.items.map(item => (
+                  <Col size="md-6" className="item-card">
                   <ListItem key={item._id}>
                     <Link to={"/items/" + item._id}>
                       <div className='Card'>
                       <strong>
                         <p>
-                          <img src={item.image} />
+                          <img class="inventory-img" src={item.image} />
                         </p>
                         <h4>
                           {item.name} {item.price}
