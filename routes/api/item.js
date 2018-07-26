@@ -6,20 +6,17 @@ var passport = require('passport');
 require('../../config/passport')(passport);
 const itemsController = require("../../controllers/itemsController");
 
-/* GET ALL ITEMS */
+
+// GET ALL ITEMS
 router.get('/', function(req, res) {
-  // router.get('/', passport.authenticate('jwt', { session: false}), function(req, res) {
-  // var token = getToken(req.headers);
-  // if (token) {
     Item.find(function (err, items) {
       if (err) return next(err);
       res.json(items);
     });
-  // } else {
-    // return res.status(403).send({success: false, msg: 'Unauthorized.'});
-  // }
 });
 
+
+// POST A NEW ITEM
 router.post('/', passport.authenticate('jwt', { session: false}), function(req, res) {
   var token = getToken(req.headers);
   if (token) {
@@ -32,6 +29,22 @@ router.post('/', passport.authenticate('jwt', { session: false}), function(req, 
   }
 });
 
+
+// DELETE AN ITEM BY ID
+router.delete('/:id', passport.authenticate('jwt', { session: false}), function(req, res) {
+  var token = getToken(req.headers);
+  if (token) {
+    Item.remove({_id: req.params.id}, function (err, post) {
+      if (err) return next(err);
+      res.json(post);
+    });
+  } else {
+    return res.status(403).send({success: false, msg: 'Unauthorized.'});
+  }
+});
+
+
+// RETRIEVE AUTH TOKEN HEADER
 getToken = function (headers) {
   if (headers && headers.authorization) {
     var parted = headers.authorization.split(' ');
@@ -44,9 +57,5 @@ getToken = function (headers) {
     return null;
   }
 };
-
-router
-  .route("/:id")
-  .delete(itemsController.remove);
 
 module.exports = router;
