@@ -29,11 +29,11 @@ const itemSeed = [
   },
 
   {
-    name: "",
-    image: "",
-    price: "",
-    category: "",
-    description: "",
+    name: "KEY CHAIN",
+    image: "https://scontent.ffcm1-1.fna.fbcdn.net/v/t1.0-9/28167315_324405028047741_1848136023893733710_n.jpg?_nc_cat=0&oh=dff2e5b8ed8ddf51b838518fd4fe3a1d&oe=5BDA532E",
+    price: "$7",
+    category: "Keychains",
+    description: "✅Personalize it with any name or word (“home”, “house”, “garage”, etc)",
     date: new Date(Date.now())
   },
 
@@ -63,6 +63,15 @@ const itemSeed = [
     description: "",
     date: new Date(Date.now())
   },
+
+  // {
+  //   name: "",
+  //   image: "",
+  //   price: "",
+  //   category: "",
+  //   description: "",
+  //   date: new Date(Date.now())
+  // },
 
 ];
 
