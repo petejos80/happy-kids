@@ -1,8 +1,8 @@
 
-.fluid-container{
+.fluid-container {
     overflow-y:hidden!important;
-  
-}
+};
+
 .allimg {
     height: 100% !important;
     width: 100% !important;
@@ -11,11 +11,12 @@
     margin-left: auto;
     display: block;
     margin-right: auto;
+};
 
-}
-.row-objects{
+.row-objects {
     margin-left: 30%!important
-}
-.toy-title{
+};
+
+.toy-title {
     margin-left: 30%!important
-}
+};
