@@ -11,9 +11,9 @@
         margin-left: auto;
         display: block;
         margin-right: auto;  
+}
 
-
-.item-img {
+.item-img{
     height: 100% !important;
     width: 100% !important;
     border-style: none;
