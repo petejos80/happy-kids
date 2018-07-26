@@ -142,7 +142,13 @@ filterItems(keychains) {
                     <Link to={"/items/" + item._id}>
                     <div className='Card'>
                       <strong>
-                        {item.name} priced at {item.price} <img src={item.image} />
+                      <p>
+                          <img src={item.image} />
+                        </p>
+                        <h4>
+                          {item.name} {item.price}
+                        </h4>
+                        <p>Category: {item.category}</p>
                       </strong>
                     </div>
                     </Link>
