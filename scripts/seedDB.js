@@ -56,11 +56,11 @@ const itemSeed = [
   },
 
   {
-    name: "",
-    image: "",
-    price: "",
-    category: "",
-    description: "",
+    name: "TEETHER BEADS",
+    image: "https://scontent.ffcm1-1.fna.fbcdn.net/v/t1.0-9/28059215_325633197924924_8483100059065651402_n.jpg?_nc_cat=0&oh=526e69f6a42a3dc09ba57b7470d9b67d&oe=5C08C15E",
+    price: "$3",
+    category: "Beads",
+    description: "You can add extra beeads or teethers to any toy.",
     date: new Date(Date.now())
   },
 
