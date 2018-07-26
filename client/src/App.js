@@ -5,17 +5,18 @@ import Nav from "./components/Nav";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Beads from "./pages/Beads";
-import Bracelets from "./pages/Bracelets"
-import Keychains from "./pages/Keychains"
-import Pacifierholders from "./pages/Pacifierholders"
-import Rattlers from "./pages/Rattlers"
-import Teethers from "./pages/Teethers"
-import Home from "./pages/Home"
-import Contact from "./pages/Contact"
+import Bracelets from "./pages/Bracelets";
+import Keychains from "./pages/Keychains";
+import Pacifierholders from "./pages/Pacifierholders";
+import Rattlers from "./pages/Rattlers";
+import Teethers from "./pages/Teethers";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 import Login from './components/Login';
-import Register from './components/Register'
-import About from './pages/About'
+import Register from './components/Register';
+import About from './pages/About';
 import Items from './pages/Items';
+import AllToys from './pages/AllToys';
 
 const App = () => (
   <Router> 
@@ -36,6 +37,7 @@ const App = () => (
         <Route exact path="/rattlers" component={Rattlers} />
         <Route exact path="/teethers" component={Teethers} />
         <Route exact path="/about" component={About} />
+        <Route exact path='/alltoys' component={AllToys} />
 
       </Switch>
       <Footer />
