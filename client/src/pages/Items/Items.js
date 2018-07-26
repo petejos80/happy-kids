@@ -98,11 +98,13 @@ class Items extends Component {
           <Col size="md-3">
             <Jumbotron>
               <h1>Add Items</h1>
-              {localStorage.getItem("jwtToken") && (
+              {localStorage.getItem("jwtToken") ? (
                 <button class="btn btn-primary" onClick={this.logout}>
                   Logout
                 </button>
-              )}
+              ) : <Link to="/login"><button class="btn btn-primary" >
+              Login
+            </button></Link>}
             </Jumbotron>
             <form>
               <Input
