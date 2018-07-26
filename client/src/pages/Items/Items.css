@@ -1,9 +1,9 @@
 .col-md-6 > .list-group-item {
     padding-bottom: 10px;
     margin-top: 25px;
-}
+};
 
-.inventory-img{
+.inventory-img {
         height: 100% !important;
         width: 100% !important;
         border-style: none;
@@ -11,9 +11,9 @@
         margin-left: auto;
         display: block;
         margin-right: auto;  
-}
+};
 
-.item-img{
+.item-img {
     height: 100% !important;
     width: 100% !important;
     border-style: none;
@@ -21,4 +21,4 @@
     margin-left: auto;
     display: block;
     margin-right: auto;
-}
+};

@@ -69,7 +69,7 @@ filterItems(bracelets) {
                   {this.state.items.map(item => (
                   <Col size="md-4" className="item-card">
                   <ListItem key={item._id}>
-                    <Link to={"/items/" + item._id}>
+                    <List value={"/items/" + item._id}>
                       <div className='Card'>
                       <strong>
 
@@ -82,7 +82,7 @@ filterItems(bracelets) {
                         <p>Category: {item.category}</p>
                       </strong>
                       </div>
-                    </Link>
+                    </List>
                     <DeleteBtn onClick={() => this.deleteItem(item._id)} />
                   </ListItem>
                   </Col>

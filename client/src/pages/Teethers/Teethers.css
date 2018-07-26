@@ -6,4 +6,9 @@
     margin-left: auto;
     display: block;
     margin-right: auto;
+    overflow-y: hidden!important;
+    overflow: hidden!important;
+}
+.list-overflow-container{
+    overflow-y: hidden!important;
 }
