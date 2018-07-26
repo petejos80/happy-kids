@@ -1,3 +1,4 @@
+
 // import React from "react";
 // import { Jumbotron } from 'reactstrap';
 
@@ -63,6 +64,7 @@
 
 // export default Beads;
 
+
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
 import Jumbotron from "../../components/Jumbotron";
@@ -73,6 +75,7 @@ import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import axios from 'axios';
 import Items from '../Items';
+
 
 
 class Beads extends Component {
@@ -86,6 +89,7 @@ class Beads extends Component {
   };
 
   componentDidMount() {
+
     axios.get('/api/items')
       .then(res => {
         this.setState({ items: res.data.filter(item => item.category === 'Beads') }, () => console.log(this.state));
@@ -123,9 +127,6 @@ filterItems(beads) {
     console.log('handle remove runned', beads, myItems, newArray)
   }
 
-
-
-
   render() {
     return (
       <Container fluid>
@@ -148,6 +149,69 @@ filterItems(beads) {
                     <DeleteBtn onClick={() => this.deleteItem(item._id)} />
                   </ListItem>
                 ))}
+
+         <Row>
+         {/* <Col size="md-3">
+            <Jumbotron>
+              <h1>Add Items for Sale</h1>
+              {localStorage.getItem('jwtToken') &&
+                <button class="btn btn-primary" onClick={this.logout}>Logout</button>
+              }
+            </Jumbotron>
+           
+            <form>
+              <Input
+                value={this.state.name}
+                onChange={this.handleInputChange}
+                name="name"
+                placeholder="Name (required)"
+              />
+              <Input
+                value={this.state.price}
+                onChange={this.handleInputChange}
+                name="price"
+                placeholder="Price (required)"
+              />
+              <TextArea
+                value={this.state.description}
+                onChange={this.handleInputChange}
+                name="description"
+                placeholder="Description (Optional)"
+              />
+              <FormBtn
+                // disabled={!(this.state.author && this.state.title)}
+                onClick={this.handleFormSubmit}
+              >
+                Submit Item
+              </FormBtn>
+            </form>
+          </Col> */}
+          <Col size="md-9 sm-12">
+            <Jumbotron>
+              <h1>Items Currently for Sale</h1>
+           
+            </Jumbotron>
+            {this.state.items.length ? (
+              <List>
+               <Container fluid>
+                 <Row>
+                {this.state.items.map(item => (
+                    <Col size="md-6" className="item-card">
+                  <ListItem key={item._id}>
+                    <Link to={"/items/" + item._id}>
+                      <strong>
+                        <p>
+                          <img src={item.image} />
+                        </p>
+                        <h4>
+                          {item.name} {item.price}
+                        </h4>
+                        <p>Category: {item.category}</p>
+                      </strong>
+                    </Link>
+                    <DeleteBtn onClick={() => this.deleteItem(item._id)} />
+                  </ListItem>
+                  ))}
               </List>
             ) : (
               <h3>No Results to Display</h3>
