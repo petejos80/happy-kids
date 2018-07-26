@@ -21,14 +21,14 @@ class FooterPage extends React.Component {
                         </Row>
                     </Container>
                 </div>
-                <Container className="mt-5 mb-4 text-center text-md-left">
+                <Container className="mt-5 mb-4 text-center">
                     <Row  className ="footer-contents"className="mt-3">
-                        <Col md="3" lg="4" xl="3" className="mb-4 dark-grey-text">
+                        <Col md="4" lg="4" xl="3" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><strong>Happy Kids</strong></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
                             <p className='p-style-footer'>I am a mother of two little angels! They inspired me to start making personalized wooden toys that are fun and safe for children any age. <br /><strong>-Ekaterina Hawthorne</strong></p>
                         </Col>
-                        <Col md="2" lg="2" xl="2" className="mb-4 dark-grey-text">
+                        <Col md="4" lg="4" xl="3" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><a href="/api/items"><strong>Items</strong></a></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
                             <p><a href="/bracelets" className="dark-grey-text">Bracelets</a></p>
@@ -37,15 +37,15 @@ class FooterPage extends React.Component {
                             <p><a href="/rattlers" className="dark-grey-text">Rattlers</a></p>
                             <p><a href="/teethers" className="dark-grey-text">Teethers</a></p>
                         </Col>
-                        <Col md="3" lg="2" xl="2" className="mb-4 dark-grey-text">
+                        {/* <Col md="3" lg="2" xl="2" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><strong>Useful links</strong></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
                             <p><a href="#!" className="dark-grey-text">Your Account</a></p>
                             <p><a href="#!" className="dark-grey-text">Become an Affiliate</a></p>
                             <p><a href="#!" className="dark-grey-text">Shipping Rates</a></p>
                             <p><a href="#!" className="dark-grey-text">Help</a></p>
-                        </Col>
-                        <Col md="4" lg="3" xl="3" className="mb-4 dark-grey-text">
+                        </Col> */}
+                        <Col md="4" lg="4" xl="3" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><strong>Contact</strong></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
                             <p><i className="fa fa-envelope mr-3"></i> happykids.accessaries.llc@gmail.com</p>
