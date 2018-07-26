@@ -166,7 +166,7 @@ class Items extends Component {
                       <div className='Card'>
                       <strong>
                         <p>
-                          <img class="inventory-img" src={item.image} />
+                          <img class="item-img" src={item.image} />
                         </p>
                         <h4>
                           {item.name} {item.price}

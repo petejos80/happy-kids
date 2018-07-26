@@ -10,6 +10,7 @@ import axios from 'axios';
 import "./AllToys.css"
 
 
+
 class AllToys extends Component {
   state = {
     items: [],
@@ -133,7 +134,7 @@ class AllToys extends Component {
                     <div className='Card'>
                       <strong>
                         <p>
-                          <img src={item.image} />
+                          <img class = "allimg" src={item.image} />
                         </p>
                         <h4>
                           {item.name} {item.price}
