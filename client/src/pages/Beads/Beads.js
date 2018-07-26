@@ -50,13 +50,13 @@ class Beads extends Component {
       .catch(err => console.log(err));
   };
 
-filterItems(bracelets) {
+filterItems(beads) {
     const myItems = this.state.items
     const newArray = myItems.filter(item => item.category !== 'Beads')
     this.setState({
       items: newArray
     })
-    console.log('handle remove runned', bracelets, myItems, newArray)
+    console.log('handle remove runned', beads, myItems, newArray)
   }
 
 
@@ -80,6 +80,7 @@ filterItems(bracelets) {
                           {item.name} {item.price}
                         </h4>
                         <p>Category: {item.category}</p>
+                        <p>{item.description}</p>
                       </strong>
                       </div>
                     </List>

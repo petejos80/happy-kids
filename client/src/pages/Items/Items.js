@@ -38,7 +38,8 @@ class Items extends Component {
 
   logout = () => {
     localStorage.removeItem("jwtToken");
-    window.location.reload();
+    this.props.history.push("/");
+    // window.location.reload();
   };
 
   loadItems = () => {
@@ -172,6 +173,7 @@ class Items extends Component {
                           {item.name} {item.price}
                         </h4>
                         <p>Category: {item.category}</p>
+                        <p>{item.description}</p>
                       </strong>
                       </div>
                     </Link>
