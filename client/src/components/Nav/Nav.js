@@ -64,10 +64,15 @@ export default class Example extends React.Component {
                <NavLink className="link-style" href='/api/items'>Items</NavLink>
              </NavItem> */}
                 <DropdownToggle href='/api/items' nav caret>
-                 Items
+                 Toys
                 </DropdownToggle>
 
                 <DropdownMenu right>
+                <DropdownItem>
+                     <NavLink href="/alltoys/"><h5>All Toys</h5></NavLink>
+                  </DropdownItem>
+                      <hr/>
+                      {/* <DropdownItem divider /> */}
                 <DropdownItem>
                      <NavLink href="/beads/">Beads</NavLink>
                   </DropdownItem>
@@ -119,6 +124,9 @@ export default class Example extends React.Component {
                         <DropdownItem divider />
                     <DropdownItem>
                       <NavLink href="/Register">Register</NavLink>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <NavLink href="/Items">Admin Db</NavLink>
                     </DropdownItem>
                   </DropdownMenu>
               </UncontrolledDropdown>
