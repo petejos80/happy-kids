@@ -80,6 +80,7 @@ filterItems(pacifierholders) {
                {item.name} {item.price}
              </h4>
              <p>Category: {item.category}</p>
+             <p>{item.description}</p>
            </strong>
            </div>
          </List>

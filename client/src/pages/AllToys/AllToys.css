@@ -1,22 +1,23 @@
-
+/* 
 .fluid-container {
     overflow-y:hidden!important;
-};
+}; */
 
-.allimg {
-    height: 100% !important;
-    width: 100% !important;
+.all-img {
+    height: 90% !important;
+    width: 90% !important;
     border-style: none;
     text-align: center;
     margin-left: auto;
     display: block;
     margin-right: auto;
+    overflow-y:hidden!important;
 };
-
+/* 
 .row-objects {
     margin-left: 30%!important
 };
 
 .toy-title {
     margin-left: 30%!important
-};
+}; */

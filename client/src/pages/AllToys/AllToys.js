@@ -16,6 +16,7 @@ class AllToys extends Component {
     items: [],
     name: "",
     price: "",
+    image: "",
     category: "",
     description: ""
   };
@@ -47,7 +48,7 @@ class AllToys extends Component {
     API.getItems()
       .then(res => {
         console.log(res)
-        this.setState({ items: res.data, name: "", price: "", category: "", description: "" })
+        this.setState({ items: res.data, name: "", price: "", image: "", category: "", description: "" })
       }
       )
       .catch(err => console.log(err));
@@ -72,16 +73,18 @@ class AllToys extends Component {
       API.saveItem({
         name: this.state.name,
         price: this.state.price,
+        image: this.state.image,
+        category: this.state.category,
         description: this.state.description
       })
-        .then(res => this.loadBooks())
+        .then(res => this.loadItems())
         .catch(err => console.log(err));
     }
   };
 
   render() {
     return (
-      <Container fluid className="fluid-container">
+      <Container fluid>
          <Row>
          {/* <Col size="md-3">
             <Jumbotron>
@@ -118,7 +121,7 @@ class AllToys extends Component {
               </FormBtn>
             </form>
           </Col> */}
-          <Col size="md-9 sm-12">
+          {/* <Col size="md-9 sm-12">
             <Jumbotron>
               <h1 className='toy-title'>All Items Currently for Sale</h1>
            
@@ -127,20 +130,21 @@ class AllToys extends Component {
           
                <Container fluid>
                <div className='row-objects'>
-                 <Row >
+                 <Row > */}
                 {this.state.items.map(item => (
-                    <Col size="md-6">
+                    <Col size="md-4" className="item-card">
                   <ListItem key={item._id}>
                     <List value={"/items/" + item._id}>
                     <div className='Card'>
                       <strong>
                         <p>
-                          <img class = "allimg" src={item.image} />
+                          <img class = "all-img" src={item.image} />
                         </p>
                         <h4>
                           {item.name} {item.price}
                         </h4>
                         <p>Category: {item.category}</p>
+                        <p>{item.description}</p>
                       </strong>
                       </div>
                     </List>
@@ -149,14 +153,14 @@ class AllToys extends Component {
                   </Col>
                 ))}
                 
-                </Row>
+                {/* </Row>
                 </div>
                 </Container>
               
             ) : (
               <h3>No Results to Display</h3>
             )}
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     );
