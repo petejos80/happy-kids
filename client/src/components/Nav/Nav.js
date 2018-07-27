@@ -121,12 +121,11 @@ export default class Example extends React.Component {
                   <DropdownMenu right>
                     <DropdownItem>
                     {localStorage.getItem("jwtToken") ? (
-                <button class="btn btn-primary" onClick={this.logout}>
-                  Logout
-                </button>
-              ) : <Link to="/login"><button class="btn btn-primary" >
-              Login
-            </button></Link>}
+                      <button class="btn btn-primary" onClick={this.logout}>
+                        Logout
+                      </button>) : (<Link to="/login"><button class="btn btn-primary" >
+                        Login
+                      </button></Link>)}
                     </DropdownItem>
                         <DropdownItem divider />
                     <DropdownItem>
