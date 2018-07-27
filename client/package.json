@@ -2,8 +2,7 @@
   "name": "happy-kids-accesories",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
-  "dependencies": {
+   "dependencies": {
     "axios": "^0.16.2",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
