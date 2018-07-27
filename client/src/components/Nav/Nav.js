@@ -13,6 +13,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
+import { Link } from "react-router-dom"
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -23,6 +24,12 @@ export default class Example extends React.Component {
       isOpen: false
     };
   }
+
+  logout = () => {
+    localStorage.removeItem("jwtToken");
+    window.location.reload();
+  };
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
@@ -123,6 +130,26 @@ export default class Example extends React.Component {
                 <DropdownToggle nav caret>
                   Sign In
                 </DropdownToggle>
+<<<<<<< HEAD
+                  <DropdownMenu right>
+                    <DropdownItem>
+                    {localStorage.getItem("jwtToken") ? (
+                      <button class="btn btn-primary" onClick={this.logout}>
+                        Logout
+                      </button>) : (<Link to="/login"><button class="btn btn-primary" >
+                        Login
+                      </button></Link>)}
+                    </DropdownItem>
+                        <DropdownItem divider />
+                    <DropdownItem>
+                      <NavLink href="/Register">Register</NavLink>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <NavLink href="/Items">Admin Db</NavLink>
+                    </DropdownItem>
+                  </DropdownMenu>
+              </UncontrolledDropdown>
+=======
                 <DropdownMenu right>
                   <DropdownItem>
                     <NavLink href="/Login">Sign In</NavLink>
@@ -139,6 +166,7 @@ export default class Example extends React.Component {
 
 
 
+>>>>>>> master
             </Nav>
           </Collapse>
         </Navbar>

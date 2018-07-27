@@ -1,4 +1,4 @@
-import React, {} from "react";
+import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import Nav from "./components/Nav";
@@ -18,8 +18,24 @@ import About from './pages/About';
 import Items from './pages/Items';
 import AllToys from './pages/AllToys';
 
+<<<<<<< HEAD
+class App extends Component {
+  state = {
+    token: ""
+  }
+
+  componentDidMount() {
+    let token = localStorage.getItem("jwtToken")
+    console.log(token);
+    this.setState({token})
+  }
+
+  render () {
+    return (
+=======
 
 const App = () => (
+>>>>>>> master
   <Router> 
     <div> 
    <Nav />
@@ -27,7 +43,7 @@ const App = () => (
 
       <Switch>
         <Route path='/login' component={Login} />
-        <Route path='/items' component={Items} />
+        {this.state.token ? <Route path='/items' component={Items} /> : <Route path='/items' component={Login} />}
         <Route path='/register' component={Register} />
         <Route exact path="/" component={Home} />
         <Route exact path="/beads" component={Beads} />
@@ -43,10 +59,9 @@ const App = () => (
       </Switch>
       <Footer />
       </div>
-  </Router>  
-);
+  </Router> ) 
+  }};
 
-document.getElementById('root');
 
 export default App;
 
