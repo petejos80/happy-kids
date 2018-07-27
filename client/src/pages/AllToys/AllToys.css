@@ -4,19 +4,28 @@
 };
 
 .allimg {
-    height: 100% !important;
-    width: 100% !important;
     border-style: none;
     text-align: center;
-    margin-left: auto;
     display: block;
-    margin-right: auto;
+    object-fit: cover;
 };
 
-.row-objects {
-    margin-left: 30%!important
-};
+h1.toy-title {
+    padding-left: 60%!important;
+};  
+.list-group-item{
+    height:200px!important;
+    width:200px!important;
 
-.toy-title {
-    margin-left: 30%!important
-};
+}
+img.allimg{
+    height:200px!important;
+    width:200px!important
+}
+/* div.jumbotron{
+    margin-left: 20%!important;
+
+} */
+/* .row{
+    margin-left: 12%;
+}  */

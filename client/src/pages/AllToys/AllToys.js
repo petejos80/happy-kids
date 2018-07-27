@@ -119,7 +119,7 @@ class AllToys extends Component {
             </form>
           </Col> */}
           <Col size="md-9 sm-12">
-            <Jumbotron>
+            <Jumbotron className='toy-jumbo'>
               <h1 className='toy-title'>All Items Currently for Sale</h1>
            
             </Jumbotron>
@@ -127,7 +127,7 @@ class AllToys extends Component {
           
                <Container fluid>
                <div className='row-objects'>
-                 <Row >
+                 <Row className="row" >
                 {this.state.items.map(item => (
                     <Col size="md-6">
                   <ListItem key={item._id}>

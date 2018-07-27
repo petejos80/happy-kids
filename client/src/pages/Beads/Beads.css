@@ -1,6 +1,6 @@
-.bead-img {
-    height: 100% !important;
-    width: 100% !important;
+img.bead-img {
+    height:200px!important;
+    width:200px!important;
     border-style: none;
     text-align: center;
     margin-left: auto;

@@ -3,22 +3,26 @@
     margin-top: 25px;
 };
 
-.inventory-img {
-        height: 100% !important;
-        width: 100% !important;
-        border-style: none;
-        text-align: center;
-        margin-left: auto;
-        display: block;
-        margin-right: auto;  
-};
-
-.item-img {
-    height: 100% !important;
-    width: 100% !important;
+.inventory-img {   
+    height:200px!important;
+    width:200px!important;
     border-style: none;
     text-align: center;
-    margin-left: auto;
     display: block;
-    margin-right: auto;
 };
+
+
+img.item-img {
+    height:200px!important;
+    width:200px!important;
+    border-style: none;
+    text-align: center;
+    display: block;
+};
+li.list-group-item{
+    margin-top: 10%
+}
+div.image-div{
+    height:200px!important;
+    width:200px!important;
+}

@@ -1,6 +1,6 @@
 .teether-img{
-    height: 100% !important;
-    width: 100% !important;
+    height:200px!important;
+    width:200px!important;
     border-style: none;
     text-align: center;
     margin-left: auto;
@@ -11,4 +11,7 @@
 }
 .list-overflow-container{
     overflow-y: hidden!important;
+}
+li.list-group-item{
+    margin-top: 10%
 }

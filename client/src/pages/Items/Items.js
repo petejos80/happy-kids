@@ -96,7 +96,7 @@ class Items extends Component {
       <Container fluid>
         <Row>
           <Col size="md-3">
-            <Jumbotron>
+            <Jumbotron className='item-jumbo'>
               <h1>Add Items</h1>
               {localStorage.getItem("jwtToken") && (
                 <button class="btn btn-primary" onClick={this.logout}>
@@ -117,12 +117,14 @@ class Items extends Component {
                 name="price"
                 placeholder="Price (required)"
               />
-              <Input
+              
+              <Input 
                 value={this.state.image}
                 onChange={this.handleInputChange}
                 name="image"
                 placeholder="Image URL (required)"
               />
+              
               <Input
                 value={this.state.category}
                 onChange={this.handleInputChange}
@@ -166,9 +168,9 @@ class Items extends Component {
                       <div className='Card'>
                       <strong>
                         <p>
-                          <img class="item-img" src={item.image} />
+                          <img style={{ height: 100, width:100 }}class="item-img" src={item.image} />
                         </p>
-                        <h4>
+                         <h4>
                           {item.name} {item.price}
                         </h4>
                         <p>Category: {item.category}</p>
