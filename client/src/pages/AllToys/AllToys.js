@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
-import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import ModalExample from "../../components/ModalExample"
 import axios from 'axios';
 import "./AllToys.css"
 
@@ -86,51 +85,7 @@ class AllToys extends Component {
     return (
       <Container fluid>
          <Row>
-         {/* <Col size="md-3">
-            <Jumbotron>
-              <h1>Add Items for Sale</h1>
-              {localStorage.getItem('jwtToken') &&
-                <button class="btn btn-primary" onClick={this.logout}>Logout</button>
-              }
-            </Jumbotron>
-           
-            <form>
-              <Input
-                value={this.state.name}
-                onChange={this.handleInputChange}
-                name="name"
-                placeholder="Name (required)"
-              />
-              <Input
-                value={this.state.price}
-                onChange={this.handleInputChange}
-                name="price"
-                placeholder="Price (required)"
-              />
-              <TextArea
-                value={this.state.description}
-                onChange={this.handleInputChange}
-                name="description"
-                placeholder="Description (Optional)"
-              />
-              <FormBtn
-                // disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Item
-              </FormBtn>
-            </form>
-          </Col> */}
-          {/* <Col size="md-9 sm-12">
-            <Jumbotron>
-              <h1 className='toy-title'>All Items Currently for Sale</h1>
-           
-            </Jumbotron>
-            {this.state.items.length ? (
-          
-               <Container fluid>
-               <div className='row-objects'>
-                 <Row > */}
+       
                 {this.state.items.map(item => (
                     <Col size="md-4" className="item-card">
                   <ListItem key={item._id}>
@@ -138,7 +93,7 @@ class AllToys extends Component {
                     <div className='Card'>
                       <strong>
                         <p>
-                          <img class = "all-img" src={item.image} />
+                          <img className = "all-img" alt="" src={item.image} />
                         </p>
                         <h4>
                           {item.name} {item.price}
@@ -148,19 +103,12 @@ class AllToys extends Component {
                       </strong>
                       </div>
                     </List>
-                    <DeleteBtn onClick={() => this.deleteItem(item._id)} />
+                    <button className="btn btn-danger"><ModalExample />Add To Cart</button>
                   </ListItem>
                   </Col>
                 ))}
                 
-                {/* </Row>
-                </div>
-                </Container>
-              
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col> */}
+            
         </Row>
       </Container>
     );

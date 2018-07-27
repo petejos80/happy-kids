@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
-import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import ModalExample from "../../components/ModalExample"
 import axios from 'axios';
-import Items from '../Items';
 import "./Rattlers.css"
 
 
@@ -74,7 +72,7 @@ filterItems(rattlers) {
            <strong>
 
              <p>
-               <img class="rattler-img" src={item.image} />
+               <img class="rattler-img" alt=""src={item.image} />
              </p>
              <h4>
                {item.name} {item.price}
@@ -84,7 +82,7 @@ filterItems(rattlers) {
            </strong>
            </div>
          </List>
-         <DeleteBtn onClick={() => this.deleteItem(item._id)} />
+         <button className="btn btn-danger"><ModalExample />Add To Cart</button>
        </ListItem>
        </Col>
      ))}
