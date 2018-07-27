@@ -48,7 +48,7 @@ class FooterPage extends React.Component {
                         <Col md="4" lg="4" xl="3" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><strong>Contact</strong></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
-                            <p><i className="fa fa-envelope mr-3"></i> happykids.accesories.llc@gmail.com</p>
+                            <p><i className="fa fa-envelope mr-3"></i> happykids.accessaries.llc@gmail.com</p>
                             <p><i className="fa fa-phone mr-3"></i> (651) 460-0579 </p>
                         </Col>
                     </Row>

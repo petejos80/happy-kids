@@ -1,8 +1,9 @@
 {
-  "name": "happy-kids-accesories",
+  "name": "mern",
   "version": "0.1.0",
   "private": true,
-   "dependencies": {
+  "proxy": "http://localhost:3001/",
+  "dependencies": {
     "axios": "^0.16.2",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
