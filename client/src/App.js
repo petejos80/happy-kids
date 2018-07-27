@@ -18,7 +18,7 @@ import About from './pages/About';
 import Items from './pages/Items';
 import AllToys from './pages/AllToys';
 
-<<<<<<< HEAD
+
 class App extends Component {
   state = {
     token: ""
@@ -32,10 +32,6 @@ class App extends Component {
 
   render () {
     return (
-=======
-
-const App = () => (
->>>>>>> master
   <Router> 
     <div> 
    <Nav />
@@ -43,7 +39,7 @@ const App = () => (
 
       <Switch>
         <Route path='/login' component={Login} />
-        {this.state.token ? <Route path='/items' component={Items} /> : <Route path='/items' component={Login} />}
+        {this.state.token ? <Route path='/items' component={Items} /> : <Route path='/items' component={Home} />}
         <Route path='/register' component={Register} />
         <Route exact path="/" component={Home} />
         <Route exact path="/beads" component={Beads} />
