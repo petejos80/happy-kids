@@ -18,6 +18,7 @@ import About from './pages/About';
 import Items from './pages/Items';
 import AllToys from './pages/AllToys';
 
+<<<<<<< HEAD
 class App extends Component {
   state = {
     token: ""
@@ -31,6 +32,10 @@ class App extends Component {
 
   render () {
     return (
+=======
+
+const App = () => (
+>>>>>>> master
   <Router> 
     <div> 
    <Nav />
@@ -76,7 +81,7 @@ export default App;
 
 //   componentDidMount() {
 //     axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
-//     axios.get('/api/item')
+//     axios.get('/api/items')
 //       .then(res => {
 //         this.setState({ items: res.data });
 //         console.log(this.state.items);

@@ -35,6 +35,12 @@ export default class Example extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+
+  logout = () => {
+    localStorage.removeItem("jwtToken");
+    window.location.reload();
+  };
+
   render() {
     return (
       <div>
@@ -56,9 +62,7 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/">
-                  Home
-                </NavLink>
+                <NavLink href="/">Home</NavLink>
               </NavItem>
 
               <UncontrolledDropdown nav inNavbar>
@@ -70,38 +74,40 @@ export default class Example extends React.Component {
                 {/* <NavItem>
                <NavLink className="link-style" href='/api/items'>Items</NavLink>
              </NavItem> */}
-                <DropdownToggle href='/api/items' nav caret>
-                 Toys
+                <DropdownToggle href="/api/items" nav caret>
+                  Toys
                 </DropdownToggle>
 
                 <DropdownMenu right>
-                <DropdownItem>
-                     <NavLink href="/alltoys/"><h5>All Toys</h5></NavLink>
-                  </DropdownItem>
-                      <hr/>
-                      {/* <DropdownItem divider /> */}
-                <DropdownItem>
-                     <NavLink href="/beads/">Beads</NavLink>
-                  </DropdownItem>
-                      <DropdownItem divider />
                   <DropdownItem>
-                     <NavLink href="/bracelets/">Bracelets</NavLink>
+                    <NavLink href="/alltoys/">
+                      <h5>All Toys</h5>
+                    </NavLink>
                   </DropdownItem>
-                      <DropdownItem divider />
+                  <hr />
+                  {/* <DropdownItem divider /> */}
                   <DropdownItem>
-                     <NavLink href="/keychains">Keychains</NavLink>
+                    <NavLink href="/beads/">Beads</NavLink>
                   </DropdownItem>
-                      <DropdownItem divider />
+                  <DropdownItem divider />
                   <DropdownItem>
-                     <NavLink href="/pacifierholders">Pacifier Holders</NavLink>
+                    <NavLink href="/bracelets/">Bracelets</NavLink>
                   </DropdownItem>
-                      <DropdownItem divider />
+                  <DropdownItem divider />
                   <DropdownItem>
-                     <NavLink href="/rattlers">Rattlers</NavLink>
+                    <NavLink href="/keychains">Keychains</NavLink>
                   </DropdownItem>
-                      <DropdownItem divider />
+                  <DropdownItem divider />
                   <DropdownItem>
-                     <NavLink href="/teethers">Teethers</NavLink>
+                    <NavLink href="/pacifierholders">Pacifier Holders</NavLink>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    <NavLink href="/rattlers">Rattlers</NavLink>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    <NavLink href="/teethers">Teethers</NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -110,20 +116,21 @@ export default class Example extends React.Component {
                <NavLink className="link-style" href='/home'>About</NavLink>
              </NavItem> */}
               <NavItem>
-                <NavLink  href="/about/">
-                  About
-                </NavLink>
+                <NavLink href="/about/">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink  href="/contact/">
-                  Contact
-                </NavLink>
+                <NavLink href="/contact/">Contact</NavLink>
               </NavItem>
 
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle  nav caret>
+              <NavItem>
+                <NavLink href="/login">Admin</NavLink>
+                </NavItem>
+
+              {/* <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
                   Sign In
                 </DropdownToggle>
+<<<<<<< HEAD
                   <DropdownMenu right>
                     <DropdownItem>
                     {localStorage.getItem("jwtToken") ? (
@@ -142,6 +149,24 @@ export default class Example extends React.Component {
                     </DropdownItem>
                   </DropdownMenu>
               </UncontrolledDropdown>
+=======
+                <DropdownMenu right>
+                  <DropdownItem>
+                    <NavLink href="/Login">Sign In</NavLink>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    <NavLink href="/Register">Register</NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <NavLink href="/Items">Admin Db</NavLink>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown> */}
+
+
+
+>>>>>>> master
             </Nav>
           </Collapse>
         </Navbar>

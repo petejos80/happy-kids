@@ -4,7 +4,7 @@ import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
+import { ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import axios from "axios";
 import "./Items.css";
@@ -38,7 +38,8 @@ class Items extends Component {
 
   logout = () => {
     localStorage.removeItem("jwtToken");
-    window.location.reload();
+    this.props.history.push("/");
+    // window.location.reload();
   };
 
   loadItems = () => {
@@ -168,12 +169,13 @@ class Items extends Component {
                       <div className='Card'>
                       <strong>
                         <p>
-                          <img class="item-img" src={item.image} />
+                          <img class="item-img" alt=""src={item.image} />
                         </p>
                         <h4>
                           {item.name} {item.price}
                         </h4>
                         <p>Category: {item.category}</p>
+                        <p>{item.description}</p>
                       </strong>
                       </div>
                     </Link>
