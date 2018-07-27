@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  UncontrolledCarousel, Container, Row, Col
+  Row, Col
 } from 'reactstrap';
 import Caro from "../../components/Carousel";
 import Paragraph from "../../components/Paragraph"

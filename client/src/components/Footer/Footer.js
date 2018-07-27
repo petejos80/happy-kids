@@ -9,7 +9,7 @@ class FooterPage extends React.Component {
             <Footer color="blue-grey" className="page-footer font-small lighten-5">
                 <div className="container-fluid text-center text-md-center">
                     <Container className ="footer-contents">
-                        <Row  className ="footer-contents" className="py-4 d-flex align-items-center">
+                        <Row  className ="footer-contents py-4 d-flex align-items-center">
                       
                             <Col md="6" lg="7" className="text-center text-md-right">
                                 <a className="fb-ic ml-0"><i className="fa fa-facebook white-text mr-lg-4"> </i></a>
@@ -22,7 +22,7 @@ class FooterPage extends React.Component {
                     </Container>
                 </div>
                 <Container className="mt-5 mb-4 text-center">
-                    <Row  className ="footer-contents"className="mt-3">
+                    <Row  className="mt-3">
                         <Col md="4" lg="4" xl="3" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><strong>Happy Kids</strong></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
