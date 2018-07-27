@@ -24,6 +24,12 @@ export default class Example extends React.Component {
       isOpen: false
     };
   }
+
+  logout = () => {
+    localStorage.removeItem("jwtToken");
+    window.location.reload();
+  };
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
