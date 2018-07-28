@@ -6,7 +6,7 @@ class Contact extends React.Component {
   render() {
     return (
       <div className="container contact-style">
-        <Form className="form" method="POST" action="https://formspree.io/abinding@gmail.com">
+        <Form className="form" method="POST" action="https://formspree.io/happykids.accessaries.llc@gmail.com">
           <h1>Contact Us</h1>
 
           <FormGroup className="form-one">
