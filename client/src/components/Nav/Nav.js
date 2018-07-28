@@ -13,6 +13,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
+import { Link } from "react-router-dom";
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -23,6 +24,13 @@ export default class Example extends React.Component {
       isOpen: false
     };
   }
+
+  logout = () => {
+    localStorage.removeItem("jwtToken");
+    this.props.history.push("/");
+    // window.location.reload();
+  };
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
@@ -59,14 +67,6 @@ export default class Example extends React.Component {
               </NavItem>
 
               <UncontrolledDropdown nav inNavbar>
-                {/* // current code
-             <DropdownToggle className="link-style" nav caret>
-                Toys
-               </DropdownToggle> */}
-
-                {/* <NavItem>
-               <NavLink className="link-style" href='/api/items'>Items</NavLink>
-             </NavItem> */}
                 <DropdownToggle href="/api/items" nav caret>
                   Toys
                 </DropdownToggle>
@@ -105,9 +105,6 @@ export default class Example extends React.Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
 
-              {/* <NavItem>
-               <NavLink className="link-style" href='/home'>About</NavLink>
-             </NavItem> */}
               <NavItem>
                 <NavLink href="/about/">About</NavLink>
               </NavItem>
@@ -115,30 +112,31 @@ export default class Example extends React.Component {
                 <NavLink href="/contact/">Contact</NavLink>
               </NavItem>
 
-              <NavItem>
-                <NavLink href="/login">Admin</NavLink>
-                </NavItem>
-
-              {/* <UncontrolledDropdown nav inNavbar>
+              <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Sign In
+                  Log In
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    <NavLink href="/Login">Sign In</NavLink>
+                    {localStorage.getItem("jwtToken") ? (
+                      <button class="btn btn-primary" onClick={this.logout}>
+                        Logout
+                      </button>
+                    ) : (
+                      <Link to="/login">
+                        <button class="btn btn-primary">Login</button>
+                      </Link>
+                    )}
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
                     <NavLink href="/Register">Register</NavLink>
                   </DropdownItem>
-                  <DropdownItem>
+                  {/* <DropdownItem>
                     <NavLink href="/Items">Admin Db</NavLink>
-                  </DropdownItem>
+                  </DropdownItem> */}
                 </DropdownMenu>
-              </UncontrolledDropdown> */}
-
-
-
+              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>
