@@ -8,17 +8,17 @@ const itemsController = require("../../controllers/itemsController");
 
 
 // GET ALL ITEMS
-router.get('/admin', passport.authenticate('jwt', { session: false}), function(req, res) {
-  var token = getToken(req.headers);
-  if (token) {
-    Book.find(function (err, items) {
-      if (err) return next(err);
-      res.json(items);
-    });
-  } else {
-    return res.status(403).send({success: false, msg: 'Unauthorized.'});
-  }
-});
+// router.get('/', passport.authenticate('jwt', { session: false}), function(req, res) {
+//   var token = getToken(req.headers);
+//   if (token) {
+//     Book.find(function (err, items) {
+//       if (err) return next(err);
+//       res.json(items);
+//     });
+//   } else {
+//     return res.status(403).send({success: false, msg: 'Unauthorized.'});
+//   }
+// });
 
 router.get('/', function(req, res) {
     Item.find(function (err, items) {
