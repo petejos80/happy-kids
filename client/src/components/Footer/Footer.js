@@ -12,26 +12,23 @@ class FooterPage extends React.Component {
                     <Container className ="footer-contents">
                         <Row  className ="footer-contents" className="py-4 d-flex align-items-center">
                       
-                            <Col md="6" lg="7" className="text-center text-md-right">
+                          {/* <Col md="4" lg="4" xl="3" className="text-center">
                                 <a className="fb-ic ml-0"><i className="fa fa-facebook white-text mr-lg-4"> </i></a>
                                 <a className="tw-ic"><i className="fa fa-twitter white-text mr-lg-4"> </i></a>
                                 <a className="gplus-ic"><i className="fa fa-google-plus white-text mr-lg-4"> </i></a>
                                 <a className="li-ic"><i className="fa fa-linkedin white-text mr-lg-4"> </i></a>
                                 <a className="ins-ic"><i className="fa fa-instagram white-text mr-lg-4"> </i></a>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
-                <Container className="mt-5 mb-4 text-center text-md-left">
-                    <Row  className ="footer-contents"className="mt-3">
-                        <Col md="4" lg="4" xl="3" className="mb-4 dark-grey-text">
+                          </Col> */}
+                       
+                          <Col md="4" lg="4" xl="3" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><strong>Happy Kids</strong>
                             <a href="https://www.facebook.com/happykidsbeads/"><Facebook style={{ height: 50 }} /></a>
                             </h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
                             <p className='p-style-footer'>I am a mother of two little angels! They inspired me to start making personalized wooden toys that are fun and safe for children any age. <br /><strong>-Ekaterina Hawthorne</strong></p>
-                        </Col>
-                        <Col md="4" lg="4" xl="3" className="mb-4 dark-grey-text">
+                          </Col>
+
+                          <Col md="4" lg="4" xl="3" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><a href="/alltoys"><strong>Items</strong></a></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
                             <p><a href="/bracelets" className="dark-grey-text">Bracelets</a></p>
@@ -52,6 +49,7 @@ class FooterPage extends React.Component {
                     <Container fluid>
                         &copy; {(new Date().getFullYear())} Copyright: <a href="/"> Happy-kids </a>
                     </Container>
+                </div>
                 </div>
             </Footer>
         );
