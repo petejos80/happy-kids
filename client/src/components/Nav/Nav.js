@@ -114,7 +114,7 @@ export default class Example extends React.Component {
 
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Log In
+                  Admin
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
