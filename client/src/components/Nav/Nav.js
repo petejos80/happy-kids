@@ -7,13 +7,12 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -49,7 +48,7 @@ export default class Example extends React.Component {
           <NavbarBrand href="/" />
 
           <NavItem>
-            <NavLink className="link-style" href="/">
+            <NavLink className="link-style" to="/">
               <img
                 className="logo"
                 src="../images/logo.png"
@@ -63,53 +62,53 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/">Home</NavLink>
+                <NavLink to="/">Home</NavLink>
               </NavItem>
 
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle href="/api/items" nav caret>
+                <DropdownToggle to="/api/items" nav caret>
                   Toys
                 </DropdownToggle>
 
                 <DropdownMenu right>
                   <DropdownItem>
-                    <NavLink href="/alltoys/">
+                    <NavLink to="/alltoys/">
                       <h5>All Toys</h5>
                     </NavLink>
                   </DropdownItem>
                   <hr />
                   {/* <DropdownItem divider /> */}
                   <DropdownItem>
-                    <NavLink href="/beads/">Beads</NavLink>
+                    <NavLink to="/beads/">Beads</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink href="/bracelets/">Bracelets</NavLink>
+                    <NavLink to="/bracelets/">Bracelets</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink href="/keychains">Keychains</NavLink>
+                    <NavLink to="/keychains">Keychains</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink href="/pacifierholders">Pacifier Holders</NavLink>
+                    <NavLink to="/pacifierholders">Pacifier Holders</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink href="/rattlers">Rattlers</NavLink>
+                    <NavLink to="/rattlers">Rattlers</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink href="/teethers">Teethers</NavLink>
+                    <NavLink to="/teethers">Teethers</NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
 
               <NavItem>
-                <NavLink href="/about/">About</NavLink>
+                <NavLink to="/about/">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/contact/">Contact</NavLink>
+                <NavLink to="/contact/">Contacts</NavLink>
               </NavItem>
 
               <UncontrolledDropdown nav inNavbar>
@@ -130,10 +129,10 @@ export default class Example extends React.Component {
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink href="/Register">Register</NavLink>
+                    <NavLink to="/Register">Register</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    <NavLink href="/Items">Admin Db</NavLink>
+                    <NavLink to="/Items">Admin Db</NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
