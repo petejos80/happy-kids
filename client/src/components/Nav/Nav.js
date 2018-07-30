@@ -132,9 +132,9 @@ export default class Example extends React.Component {
                   <DropdownItem>
                     <NavLink href="/Register">Register</NavLink>
                   </DropdownItem>
-                  {/* <DropdownItem>
+                  <DropdownItem>
                     <NavLink href="/Items">Admin Db</NavLink>
-                  </DropdownItem> */}
+                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
