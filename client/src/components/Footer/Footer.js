@@ -20,15 +20,15 @@ class FooterPage extends React.Component {
                                 <a className="ins-ic"><i className="fa fa-instagram white-text mr-lg-4"> </i></a>
                           </Col> */}
                        
-                          <Col md="4" lg="4" xl="3" className="mb-4 dark-grey-text">
+                          <Col md="4" lg="4" xl="4" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><strong>Happy Kids</strong>
-                            <a href="https://www.facebook.com/happykidsbeads/"><Facebook style={{ height: 50 }} /></a>
+                           
                             </h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
-                            <p className='p-style-footer'>I am a mother of two little angels! They inspired me to start making personalized wooden toys that are fun and safe for children any age. <br /><strong>-Ekaterina Hawthorne</strong></p>
+                            <p >I am a mother of two little angels!<br/><br/>They inspired me <br/>to start making personalized <br/>wooden toys that are fun and <br/>safe for children any age. <br/><br/><strong>-Ekaterina Hawthorne</strong></p>
                           </Col>
 
-                          <Col md="4" lg="4" xl="3" className="mb-4 dark-grey-text">
+                          <Col md="4" lg="4" xl="4" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><a href="/alltoys"><strong>Items</strong></a></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
                             <p><a href="/bracelets" className="dark-grey-text">Bracelets</a></p>
@@ -37,7 +37,7 @@ class FooterPage extends React.Component {
                             <p><a href="/rattlers" className="dark-grey-text">Rattlers</a></p>
                             <p><a href="/teethers" className="dark-grey-text">Teethers</a></p>
                         </Col>
-                        <Col md="4" lg="4" xl="3" className="mb-4 dark-grey-text">
+                        <Col md="4" lg="4" xl="4" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><strong>Contact</strong></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
                             <p><i className="fa fa-envelope mr-3"></i> happykids.accesories.llc@gmail.com</p>
@@ -47,7 +47,7 @@ class FooterPage extends React.Component {
                 </Container>
                 <div className="footer-copyright text-center py-3">
                     <Container fluid>
-                        &copy; {(new Date().getFullYear())} Copyright: <a href="/"> Happy-kids </a>
+                        &copy; {(new Date().getFullYear())} Copyright: <a href="/"> Happy-kids </a> <a href="https://www.facebook.com/happykidsbeads/"><Facebook style={{ height: 50 }} /></a>
                     </Container>
                 </div>
                 </div>
