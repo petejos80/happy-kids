@@ -2,7 +2,7 @@
   "name": "mern",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://happy-kids-accesories.herokuapp.com/",
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "axios": "^0.16.2",
     "bcrypt-nodejs": "0.0.3",
