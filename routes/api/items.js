@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var Item = require('../../models/Item');
+var Item = require('../../models/item');
 var passport = require('passport');
 require('../../config/passport')(passport);
 const itemsController = require("../../controllers/itemsController");
