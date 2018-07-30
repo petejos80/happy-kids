@@ -1,3 +1,3 @@
 # happy-kids
 
-![Screenshot](\client\public\images\happy-kids.gif)
+![Screenshot](.\client\public\images\happy-kids.gif)
