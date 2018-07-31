@@ -30,13 +30,13 @@ class FooterPage extends React.Component {
                           </Col>
 
                           <Col md="4" lg="4" xl="4" className="mb-4 dark-grey-text">
-                            <h6 className="text-uppercase font-weight-bold"><a href="/alltoys"><strong>Items</strong></a></h6>
+                            <h6 className="text-uppercase font-weight-bold"><Link to="/alltoys"><strong>Items</strong></Link></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
                             <p><Link to="/bracelets" className="dark-grey-text">Bracelets</Link></p>
-                            <p><a href="/keychains" className="dark-grey-text">Keychains</a></p>
-                            <p><a href="/pacifierholders" className="dark-grey-text">Pacifierholders</a></p>
-                            <p><a href="/rattlers" className="dark-grey-text">Rattlers</a></p>
-                            <p><a href="/teethers" className="dark-grey-text">Teethers</a></p>
+                            <p><Link to="/keychains" className="dark-grey-text">Keychains</Link></p>
+                            <p><Link to="/pacifierholders" className="dark-grey-text">Pacifierholders</Link></p>
+                            <p><Link to="/rattlers" className="dark-grey-text">Rattlers</Link></p>
+                            <p><Link to="/teethers" className="dark-grey-text">Teethers</Link></p>
                         </Col>
                         <Col md="4" lg="4" xl="4" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><strong>Contact</strong></h6>
