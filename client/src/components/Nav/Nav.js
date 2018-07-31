@@ -67,7 +67,7 @@ export default class Example extends React.Component {
               </NavItem>
 
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle tag={Link} to="/api/items" nav caret>
+                <DropdownToggle nav caret>
                   Toys
                 </DropdownToggle>
 
