@@ -46,10 +46,10 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar className="nav-style" color="light" light expand="md">
-          <NavbarBrand href="/" />
+          <NavbarBrand tag={Link} to="/" />
 
           <NavItem>
-            <NavLink className="link-style" href="/">
+            <NavLink className="link-style" tag={Link} to="/">
               <img
                 className="logo"
                 src="../images/logo.png"
@@ -63,11 +63,11 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/">Home</NavLink>
+                <NavLink tag={Link} to="/">Home</NavLink>
               </NavItem>
 
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle href="/api/items" nav caret>
+                <DropdownToggle tag={Link} to="/api/items" nav caret>
                   Toys
                 </DropdownToggle>
 
@@ -80,36 +80,36 @@ export default class Example extends React.Component {
                   <hr />
                   {/* <DropdownItem divider /> */}
                   <DropdownItem>
-                    <NavLink to="/beads/">Beads</NavLink>
+                    <NavLink tag={Link} to="/beads">Beads</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink to="/bracelets/">Bracelets</NavLink>
+                    <NavLink tag={Link} to="/bracelets">Bracelets</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink to="/keychains">Keychains</NavLink>
+                    <NavLink tag={Link} to="/keychains">Keychains</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink to="/pacifierholders">Pacifier Holders</NavLink>
+                    <NavLink tag={Link} to="/pacifierholders">Pacifier Holders</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink to="/rattlers">Rattlers</NavLink>
+                    <NavLink tag={Link} to="/rattlers">Rattlers</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink to="/teethers">Teethers</NavLink>
+                    <NavLink tag={Link} to="/teethers">Teethers</NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
 
               <NavItem>
-                <NavLink href="/about/">About</NavLink>
+                <NavLink tag={Link} to="/about">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/contact/">Contacto</NavLink>
+                <NavLink tag={Link} to="/contact">Contacto</NavLink>
               </NavItem>
 
               <UncontrolledDropdown nav inNavbar>
@@ -130,10 +130,10 @@ export default class Example extends React.Component {
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink href="/Register">Register</NavLink>
+                    <NavLink tag={Link} to="/Register">Register</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    <NavLink href="/Items">Admin Db</NavLink>
+                    <NavLink tag={Link} to="/Items">Admin Db</NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
