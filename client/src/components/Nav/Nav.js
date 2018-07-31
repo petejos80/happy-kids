@@ -73,7 +73,7 @@ export default class Example extends React.Component {
 
                 <DropdownMenu right>
                   <DropdownItem>
-                    <NavLink href="alltoys">
+                    <NavLink tag={Link} to="/alltoys">
                       <h5>All Toys</h5>
                     </NavLink>
                   </DropdownItem>
