@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Container, Row, Footer } from 'mdbreact';
 import './Footer.css';
 import Facebook from 'react-share-icons/lib/Facebook';
+import { Link } from "react-router-dom";
 
 
 class FooterPage extends React.Component {
@@ -31,7 +32,7 @@ class FooterPage extends React.Component {
                           <Col md="4" lg="4" xl="4" className="mb-4 dark-grey-text">
                             <h6 className="text-uppercase font-weight-bold"><a href="/alltoys"><strong>Items</strong></a></h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px'}}/>
-                            <p><a href="/bracelets" className="dark-grey-text">Bracelets</a></p>
+                            <p><Link to="/bracelets" className="dark-grey-text">Bracelets</Link></p>
                             <p><a href="/keychains" className="dark-grey-text">Keychains</a></p>
                             <p><a href="/pacifierholders" className="dark-grey-text">Pacifierholders</a></p>
                             <p><a href="/rattlers" className="dark-grey-text">Rattlers</a></p>

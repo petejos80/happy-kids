@@ -109,7 +109,7 @@ export default class Example extends React.Component {
                 <NavLink tag={Link} to="/about">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/contact">Contacto</NavLink>
+                <NavLink tag={Link} to="/contact">Contact</NavLink>
               </NavItem>
 
               <UncontrolledDropdown nav inNavbar>
