@@ -36,7 +36,7 @@ cd client && npm install
 * [JSON Web Token](https://jwt.io) - for session auth
 * [BCrypt](https://www.npmjs.com/package/bcrypt) - for password hashing
 * [Sequelize](http://docs.sequelizejs.com/) - for database ORM
-* [Materialize](https://materializecss.com/) - for styling
+* [Reactstrap](https://reactstrap.github.io/) - for styling
 
 ## Screenshots
 
