@@ -31,7 +31,6 @@ cd client && npm install
 * [Node](https://nodejs.org/en/) - for server-side JS
 * [Express](https://expressjs.com/) - for server-side JS
 * [MySQL](https://www.mysql.com/) - for database
-* [Handlebars](https://handlebarsjs.com/) - for templating
 * [Passport](http://www.passportjs.org/) - for user auth
 * [JSON Web Token](https://jwt.io) - for session auth
 * [BCrypt](https://www.npmjs.com/package/bcrypt) - for password hashing
